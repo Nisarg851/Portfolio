@@ -1,0 +1,418 @@
+/* From Uiverse.io by Mohammad-Rahme-576 */ 
+/* Container Styles */
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    font-family: "Arial", sans-serif;
+    overflow: visible;
+  }
+  
+  /* Button Styles */
+  .button-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition:
+      background 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+      transform 0.3s ease,
+      box-shadow 0.4s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+  }
+  
+  .button-content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    filter: blur(15px);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -1;
+  }
+  
+  .button-content::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    transform: scale(0);
+    transition: transform 0.6s ease-out;
+    z-index: -1;
+  }
+  
+  .button-content:hover::before {
+    opacity: 1;
+  }
+  
+  .button-content:hover::after {
+    transform: scale(1);
+  }
+  
+  .button-content:hover {
+    background: black;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px) scale(1.05);
+  }
+  
+  .button-content:active {
+    transform: translateY(-2px) scale(0.98);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .text {
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 8px;
+    white-space: nowrap;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: letter-spacing 0.3s ease;
+  }
+  
+  .button-content:hover .text {
+    letter-spacing: 1px;
+  }
+  
+  .plus-icon {
+    fill: white;
+    transition:
+      transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+      fill 0.3s ease;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+  }
+  
+  .button-content:hover .plus-icon {
+    transform: rotate(180deg);
+    fill: #ffffff;
+  }
+  
+  /* Tooltip Styles */
+  .tooltip-content {
+    position: absolute;
+    top: 105%;
+    left: 65%;
+    /* transform: translateY(-50%) scale(0.8); */
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    /* transition:
+      opacity 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+      transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+      visibility 0.5s ease; */
+    z-index: 100;
+    pointer-events: none;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.9);
+  }
+  
+  .tooltip-container:hover .tooltip-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-48%) scale(1);
+    pointer-events: auto;
+  }
+  
+  /* Social Icons Styles */
+  .social-icons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .social-icon {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    /* transition:
+      transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+      background 0.3s ease,
+      box-shadow 0.4s ease; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .social-icon::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .social-icon:hover::before {
+    opacity: 1;
+  }
+  
+  .social-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: #333;
+    transition:
+      transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+      fill 0.3s ease;
+    z-index: 1;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.0001);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .social-icon:active {
+    transform: translateY(-2px) scale(1.0005);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .social-icon:hover img {
+    transform: scale(1.2);
+    fill: white;
+  }
+  
+  .social-icon.mail:hover {
+    background: red;
+  }
+  
+  .social-icon.github:hover {
+    background: linear-gradient(135deg, #ec57a9, #16306D);
+  }
+  
+  .social-icon.linkedin:hover {
+    background: linear-gradient(135deg, #0077b5, #005e94);
+  }
+  
+  /* Animation for Pulse Effect */
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(150, 150, 150, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+  }
+  
+  .button-content {
+    animation: pulse 2s infinite;
+  }
+  
+  /* Hover Ripple Effect */
+  @keyframes ripple {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+  
+  .button-content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: inherit;
+    transform: scale(0);
+    opacity: 0;
+  }
+  
+  .button-content:active::before {
+    animation: ripple 0.6s linear;
+  }
+  
+  /* Accessibility */
+  .button-content:focus {
+    outline: none;
+    box-shadow:
+      0 0 0 3px rgba(110, 142, 251, 0.5),
+      0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .button-content:focus:not(:focus-visible) {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .button-content {
+      padding: 12px 24px;
+      border-radius: 40px;
+    }
+  
+    .text {
+      font-size: 16px;
+    }
+  
+    .tooltip-content {
+      width: 240px;
+      padding: 18px;
+    }
+  
+    .social-icon {
+      width: 44px;
+      height: 44px;
+    }
+  
+    .social-icon img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .button-content {
+      padding: 10px 20px;
+    }
+  
+    .text {
+      font-size: 14px;
+    }
+  
+    .tooltip-content {
+      width: 200px;
+      padding: 15px;
+    }
+  
+    .social-icon {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .social-icon img {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  
+  /* Dark Mode Support */
+  @media (prefers-color-scheme: dark) {
+    .tooltip-content {
+      background: rgba(30, 30, 30, 0.9);
+      color: white;
+    }
+  
+    .tooltip-content::before {
+      border-color: transparent transparent rgba(30, 30, 30, 0.9) transparent;
+    }
+  
+    .social-icon {
+      background: #2a2a2a;
+    }
+  
+    .social-icon img {
+      fill: #e0e0e0;
+    }
+  }
+  
+  /* Print Styles */
+  @media print {
+    .tooltip-container {
+      display: none;
+    }
+  }
+  
+  /* Reduced Motion */
+  @media (prefers-reduced-motion: reduce) {
+    .button-content,
+    .plus-icon,
+    .social-icon,
+    .tooltip-content {
+      transition: none;
+    }
+  
+    .button-content {
+      animation: none;
+    }
+  }
+  
+  /* Custom Scrollbar for Tooltip Content */
+  .tooltip-content::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .tooltip-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+  }
+  
+  .tooltip-content::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+  }
+  
+  .tooltip-content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+/* .button {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: black;
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .svgIcon {
+    width: 16px;
+    transition-duration: 0.3s;
+  }
+  
+  .svgIcon path {
+    fill: white;
+  }
+  
+  .button:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: black;
+    align-items: center;
+  }
+  
+  .button:hover .svgIcon {
+    transition-duration: 0.3s;
+    transform: rotateZ(90deg);
+  }
+  
+  .button::after {
+    content: "Let's Connect";
+    color: white;
+    font-size: 0px;
+  }
+  
+  .button:hover::after {
+    margin-left: 4px;
+    font-size: 14px;
+    opacity: 1;
+    transition-duration: 0.3s;
+  }
+   */
