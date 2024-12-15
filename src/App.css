@@ -1,13 +1,36 @@
-.primary-title {
+*{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+*::-webkit-scrollbar {
+    display: none; 
+}
+
+.title {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .primary-title p{
     padding: 2px;
+    font-size: 1.6rem;
 } 
 
 .primary-title p::first-letter {
-    font-size: 1.4em;
+    font-size: 2rem;
+}
+
+.secondary-title {
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+.secondary-title p{
+    padding: 2px;
+    font-size: 1.2rem;
+}
+
+.secondary-title p::first-letter {
+    font-size: 1.6rem;
 }
 
 .highlight {

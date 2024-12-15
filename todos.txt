@@ -1,0 +1,3 @@
+a0 - make a side display to showcase work and projects
+a1 - write a small blog on how to tasks from the work experience was completed.
+a2 - make the bullet point in work experience pop on hover and show the blog in the side display when clicked (blog referenced in task a1)

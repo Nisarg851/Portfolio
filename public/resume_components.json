@@ -1,0 +1,86 @@
+{
+    "name": "Nisargkumar Mahyavanshi",
+    "contact": {
+      "phone": "+1 9057839587",
+      "email": "nisargkumar.dev@gmail.com",
+      "linkedin": "http://www.linkedin.com/in/nisargmahyavanshi",
+      "github": "https://github.com/Nisarg851"
+    },
+    "summary": "Results-oriented DevOps Engineer with a strong foundation in cloud infrastructure, automation, and CI/CD pipelines. Proven ability to design, implement, and optimize cloud-based solutions using AWS. Expertise in infrastructure as code, containerization, and scripting languages. Passionate about delivering efficient and reliable systems. Seeking a challenging role to leverage technical skills and contribute to high-performing DevOps teams.",
+    "skills_and_tools": {
+      "languages": ["C", "C++", "Java", "Kotlin", "Javascript", "Typescript", "Python", "Go", "Bash", "Power-shell"],
+      "cloud_and_devops_tools": ["AWS", "Azure", "Linux (Redhat)", "Git", "Jenkins", "Docker", "Docker Compose", "Kubernetes", "Terraform", "Ansible", "Sonarqube", "Github Actions", "CircleCI", "Prometheus", "Grafana"],
+      "web_development": ["React.js", "Node.js", "FastAPI", "Django", "Flask", "AWS Amplify", "Firebase", "Nginx", "Apache", "REST", "GraphQL"],
+      "databases": ["MySQL", "Postgres", "MongoDB", "Microsoft SQL", "Redis"]
+    },
+    "work_experience": [
+      {
+        "role": "Full-stack Developer / DevOps",
+        "duration": {
+          "start":"May 2024",
+          "end": "Present"
+        },
+        "organization": "Humber College",
+        "location": "Toronto, ON",
+        "responsibilities": [
+          "Led a cross-functional team of 5 to design, develop, and deploy a scalable AI-powered chatbot, ensuring on-time delivery under budget constraints.",
+          "Built a responsive, user-friendly frontend with React.js and TypeScript, while architecting a high-performance backend using Python and FastAPI with a Serverless Architecture resulting in a 99.9% uptime and seamless user interactions.",
+          "Automated the CI/CD pipeline using GitHub Actions to manage testing, building, and deployment processes, which reduced manual deployment time by 50% and increased product reliability",
+          "Containerized applications using Docker, ensuring consistency and streamlining the development-to-production workflow, improving deployment speed and environment parity.",
+          "Implemented JWT-based authentication to enhance application security and protect sensitive user data."
+        ]
+      },
+      {
+        "role": "Full-stack Developer / Cloud Architect",
+        "duration": {
+          "start":"May 2023",
+          "end": "Dec 2023"
+        },
+        "organization": "Apptist",
+        "location": "Toronto, ON",
+        "responsibilities": [
+          "Migrated backend infrastructure from Node.js to AWS Amplify, leveraging AWS Cognito for multi-factor authentication (MFA) and AWS AppSync for GraphQL API management, improving scalability and data security.",
+          "Redesigned the database schema using AWS DynamoDB, reducing query response times by 30% and enhancing overall application performance.",
+          "Developed a responsive UI with React.js, leading to a 25% increase in user engagement and a smoother userexperience.",
+          "Optimized deployment processes by using AWS S3 for static content hosting and CloudFront for global content delivery, cutting page load times by 50%",
+          "Secured 1st place at the Humber Expo among 20 teams, recognized for innovative use of AWS services and achieving a fully cloud-native architecture."
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "name": "Azure Infrastructure Automation with Terraform and Ansible",
+        "description": "Designed and implemented an optimized Azure infrastructure using Terraform and Ansible, provisioning Linux and Windows VMs, load balancing, and database services.",
+        "source_code": "https://github.com/Nisarg851/N01579649_Terraform_Azure_Infra"
+      },
+      {
+        "name": "Book Review Web App",
+        "description": "Deployed a Django application on AWS with Docker and AWS RDS Postgres. Integrated robust CI/CD pipelines with Jenkins and SonarQube.",
+        "source_code": "https://github.com/Nisarg851/virtualization-book-review"
+      },
+      {
+        "name": "End-to-End ML Pipeline on AWS SageMaker",
+        "description": "Developed a Machine Learning pipeline using AWS SageMaker for model provisioning and scaling, including preprocessing, training, and deployment.",
+        "source_code": "https://github.com/Nisarg851/virtualization-book-review"
+      }
+    ],
+    "education_and_certifications": [
+      {
+        "qualification": "AWS Certified Developer - Associate",
+        "date": "Oct 2024",
+        "institution": "Amazon Web Services Training and Certification"
+      },
+      {
+        "qualification": "Graduate Certification in Cloud Computing",
+        "duration": "Jan 2023 – Aug 2023",
+        "institution": "Humber (North Campus), Etobicoke, Canada"
+      },
+      {
+        "qualification": "Bachelor’s Degree in Computer Science and Engineering",
+        "duration": "July 2018 – June 2022",
+        "institution": "R.N.G. Patel Institute of Technology, Gujarat, India",
+        "cgpa": "9.2 / 10.0"
+      }
+    ]
+  }
+  

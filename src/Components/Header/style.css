@@ -1,4 +1,3 @@
-/* From Uiverse.io by Mohammad-Rahme-576 */ 
 /* Container Styles */
 .tooltip-container {
     position: relative;
@@ -106,10 +105,10 @@
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
     opacity: 0;
     visibility: hidden;
-    /* transition:
+    transition:
       opacity 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
       transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
-      visibility 0.5s ease; */
+      visibility 0.5s ease;
     z-index: 100;
     pointer-events: none;
     backdrop-filter: blur(10px);
@@ -363,56 +362,3 @@
   .tooltip-content::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
-
-/* .button {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    background-color: black;
-    border: none;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
-    cursor: pointer;
-    transition-duration: 0.3s;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .svgIcon {
-    width: 16px;
-    transition-duration: 0.3s;
-  }
-  
-  .svgIcon path {
-    fill: white;
-  }
-  
-  .button:hover {
-    width: 140px;
-    border-radius: 50px;
-    transition-duration: 0.3s;
-    background-color: black;
-    align-items: center;
-  }
-  
-  .button:hover .svgIcon {
-    transition-duration: 0.3s;
-    transform: rotateZ(90deg);
-  }
-  
-  .button::after {
-    content: "Let's Connect";
-    color: white;
-    font-size: 0px;
-  }
-  
-  .button:hover::after {
-    margin-left: 4px;
-    font-size: 14px;
-    opacity: 1;
-    transition-duration: 0.3s;
-  }
-   */
