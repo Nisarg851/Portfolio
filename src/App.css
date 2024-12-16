@@ -3,7 +3,7 @@
 }
 
 *::-webkit-scrollbar {
-    display: none; 
+    display: none;
 }
 
 .title {
@@ -34,5 +34,9 @@
 }
 
 .highlight {
+    border: 1px solid black;
+}
+
+.highlight-with-child * {
     border: 1px solid black;
 }

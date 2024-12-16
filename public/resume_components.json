@@ -51,17 +51,33 @@
       {
         "name": "Azure Infrastructure Automation with Terraform and Ansible",
         "description": "Designed and implemented an optimized Azure infrastructure using Terraform and Ansible, provisioning Linux and Windows VMs, load balancing, and database services.",
-        "source_code": "https://github.com/Nisarg851/N01579649_Terraform_Azure_Infra"
+        "source_code": "https://github.com/Nisarg851/N01579649_Terraform_Azure_Infra",
+        "implementation_link": "#",
+        "tags": [{"azure":"Azure"}, 
+          {"terraform":"Terraform"}, 
+          {"ansible":"Ansible"}, 
+          {"solution_architect":"Soln. Arch"}, {"iac":"IaC"}]
       },
       {
         "name": "Book Review Web App",
         "description": "Deployed a Django application on AWS with Docker and AWS RDS Postgres. Integrated robust CI/CD pipelines with Jenkins and SonarQube.",
-        "source_code": "https://github.com/Nisarg851/virtualization-book-review"
+        "source_code": "https://github.com/Nisarg851/virtualization-book-review",
+        "implementation_link": "#",
+        "tags": [{"python":"Python"}, 
+        {"docker":"Docker"}, 
+        {"aws":"AWS"}, 
+        {"jenkins":"Jenkins"}, 
+        {"postgres":"Postgres"}]
       },
       {
         "name": "End-to-End ML Pipeline on AWS SageMaker",
         "description": "Developed a Machine Learning pipeline using AWS SageMaker for model provisioning and scaling, including preprocessing, training, and deployment.",
-        "source_code": "https://github.com/Nisarg851/virtualization-book-review"
+        "source_code": "https://github.com/Nisarg851/virtualization-book-review",
+        "implementation_link": "#",
+        "tags": [{"aws":"AWS"}, 
+        {"ai":"AI"}, 
+        {"ml":"Machine Learning"}, 
+        {"preprocessing":"Data Preprocessing"}, {"visulization":"Visulization"}]
       }
     ],
     "education_and_certifications": [

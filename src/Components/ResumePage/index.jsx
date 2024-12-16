@@ -1,12 +1,43 @@
 import "./style.css"
 import Header from "../Header";
 import WorkExperience from "../WorkExperience";
+import Projects from "../Projects";
+
+import { useRef, useEffect } from "react";
 
 const ResumePage = () => {
+
+    const containerRef = useRef(null);
+
+    const handleScroll = (e) => {
+        if (containerRef.current) {
+            const { scrollTop, scrollHeight, clientHeight } = containerRef.current;
+            if (scrollTop + clientHeight < scrollHeight && scrollTop > 0) {
+                e.preventDefault();
+            }
+        }
+    };
+
+    useEffect(() => {
+        const container = containerRef.current;
+        if (container) {
+            window.addEventListener('wheel', (e) => {
+                const isWithinContainer = container.contains(e.target);
+                if (!isWithinContainer) {
+                    container.scrollBy({ top: e.deltaY });
+                    e.preventDefault();
+                }
+            });
+
+            return () => window.removeEventListener('wheel', handleScroll);
+        }
+    }, []);
+
     return (
-        <div className='p-2 w-[45vw] h-[100vh] border-2 border-black overflow-y-scroll'>
-            <Header/>
-            <WorkExperience/>
+        <div ref={containerRef} className='my-4 p-2 w-[45vw] h-[95vh] border-2 border-black overflow-y-scroll flex flex-col gap-5'>
+            <Header className="component" />
+            <WorkExperience className="component"/>
+            <Projects className="component"/>
         </div>
     );
 }

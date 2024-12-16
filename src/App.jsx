@@ -3,7 +3,7 @@ import ResumePage from './Components/ResumePage'
 
 function App() {
   return (
-    <div className='w-full flex justify-center items-center'>
+    <div className='highlight w-full flex justify-center items-center'>
       <ResumePage/>
     </div>
   )

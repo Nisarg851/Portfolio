@@ -2,12 +2,16 @@ import "./style.css";
 import BulletPointIcon from "/bullet-point-icon.svg";
 import resume_components from "../../../public/resume_components.json";
 import { getImageUrl } from "../../utils/image_utils";
+import { useState } from "react";
 
 const ExperienceComponent = (experience) => {
-    console.log(getImageUrl(experience.experience.organization))
+    const [organizationLogoRingSize,setOrganizationLogoRingSize] = useState(2);
     return (
-        <li className="ms-5">            
-            <span className={`absolute mt-0.5 flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-2 ${experience.experience.duration.end=="Present" ? "ring-[#00ff00]" : "ring-[#0077b5]"}`}>
+        <li className="ms-5"
+            onMouseEnter={() => setOrganizationLogoRingSize(4)}
+            onMouseLeave={() => setOrganizationLogoRingSize(2)}
+        >            
+            <span className={`absolute mt-0.5 flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-${organizationLogoRingSize} ${experience.experience.duration.end=="Present" ? "ring-[#00ff00]" : "ring-[#0077b5]"}`}>
                 <img src={getImageUrl(experience.experience.organization)} alt={experience.experience.organization} 
                 className="bg-white rounded-xl p-0.5"/>
             </span>
@@ -39,13 +43,13 @@ const ExperienceComponent = (experience) => {
 
 const WorkExperience = () => {
     return (
-        <div className="h-[60%] overflow-hide w-highlight">
+        <div className="h-[60%] overflow-clip border-b-[1px] border-black">
             <h2 className="flex justify-start text-xl title secondary-title">
                 <p>WORK</p>
                 <p>EXPERIENCE</p>
             </h2>
             {/* <hr/> */}
-            <div className="h-full overflow-y-scroll">
+            <div className="h-[95%] overflow-y-scroll">
                 <ol className="mx-4 py-2 relative border-l-[1.5px] border-black">
                     {resume_components.work_experience.map((experience, index) => {
                         return <ExperienceComponent key={index} experience={experience}/>
