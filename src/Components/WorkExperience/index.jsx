@@ -5,14 +5,15 @@ import { getImageUrl } from "../../utils/image_utils";
 import { useState } from "react";
 
 const ExperienceComponent = (experience) => {
-    const [organizationLogoRingSize,setOrganizationLogoRingSize] = useState(2);
+    const [organizationLogoRingSize,setOrganizationLogoRingSize] = useState(3);
     
     return (
         <li className="ms-5"
-            onMouseEnter={() => setOrganizationLogoRingSize(6)}
-            onMouseLeave={() => setOrganizationLogoRingSize(2)}
+            onMouseEnter={() => setOrganizationLogoRingSize(4)}
+            onMouseLeave={() => setOrganizationLogoRingSize(3)}
         >            
-            <span className={`absolute mt-0.5 flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-[${organizationLogoRingSize}px] ${experience.experience.duration.end=="Present" ? "ring-[#00ff00]" : "ring-[#0077b5]"}`}>
+            {/* <span className={`absolute mt-0.5 flex items-center justify-center w-6 h-6 rounded-full -start-3 border-[${organizationLogoRingSize}px] ${experience.experience.duration.end=="Present" ? "border-[#00ff00]" : "border-[#0077b5]"}`}> */}
+            <span className={`absolute p-[${organizationLogoRingSize-1}px] mt-0.5 flex items-center justify-center w-${organizationLogoRingSize*2} h-${organizationLogoRingSize*2} rounded-full -start-${organizationLogoRingSize} ${experience.experience.duration.end=="Present" ? "bg-[#00ff00]" : "bg-[#0077b5]"}`}>
                 <img src={getImageUrl(experience.experience.organization)} alt={experience.experience.organization} 
                 className="bg-white rounded-2xl p-0.5"/>
             </span>

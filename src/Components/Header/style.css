@@ -13,7 +13,7 @@
     justify-content: center;
     background: black;
     color: white;
-    padding: 5px 10px;
+    padding: 8px 16px;
     border-radius: 50px;
     cursor: pointer;
     transition:
@@ -99,7 +99,6 @@
     position: absolute;
     top: 105%;
     left: 65%;
-    /* transform: translateY(-50%) scale(0.8); */
     background: white;
     border-radius: 15px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
@@ -118,10 +117,10 @@
   .tooltip-container:hover .tooltip-content {
     opacity: 1;
     visibility: visible;
-    transform: translateX(-48%) scale(1);
+    transform: translateX(-45%) scale(1);
     pointer-events: auto;
   }
-  
+
   /* Social Icons Styles */
   .social-icons {
     display: flex;
@@ -249,40 +248,40 @@
   
   .button-content:focus:not(:focus-visible) {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Responsive Design */
+  }  
+
   @media (max-width: 768px) {
     .button-content {
-      padding: 12px 24px;
+      padding: 6px 14px;
       border-radius: 40px;
     }
   
     .text {
-      font-size: 16px;
+      font-size: 14px;
     }
   
     .tooltip-content {
-      width: 240px;
-      padding: 18px;
+      width: 160px;
+      padding: 2px;
     }
   
     .social-icon {
-      width: 44px;
-      height: 44px;
+      width: 34px;
+      height: 34px;
     }
   
     .social-icon img {
-      width: 20px;
-      height: 20px;
+      width: 25px;
+      height: 25px;
     }
+
+    .tooltip-container:hover .tooltip-content {
+      transform: translateX(-60%) scale(1);
+    }
+
   }
   
-  @media (max-width: 480px) {
-    .button-content {
-      padding: 10px 20px;
-    }
-  
+  /* @media (max-width: 480px) {
     .text {
       font-size: 14px;
     }
@@ -301,7 +300,7 @@
       width: 18px;
       height: 18px;
     }
-  }
+  } */
   
   /* Dark Mode Support */
   @media (prefers-color-scheme: dark) {

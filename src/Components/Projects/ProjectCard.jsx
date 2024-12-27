@@ -3,7 +3,7 @@ import Tag from "../Common/Tag";
 
 const ProjectCard = (project) => {
     return (
-        <div className="card min-w-[31.7%] h-full me-4 rounded-md overflow-clip">
+        <div className="card min-w-[70%] sm:min-w-[31.7%] h-full me-4 rounded-md overflow-clip">
             <div className="p-1.5 w-full h-[80%] overflow-hidden flex flex-col justify-between">
                 <div>
                     <a href={project.project.source_code} 

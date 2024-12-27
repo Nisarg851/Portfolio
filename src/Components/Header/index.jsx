@@ -25,8 +25,8 @@ const Header = () => {
   ]
 
   return (
-    <div className="relative w-full header">
-      <div className="absolute h-full mt-1.5">
+    <div className="flex flex-col-reverse items-center md:flex-row w-full">
+      <div className="h-full">
         <div className="tooltip-container">
           <div className="button-content">
             <img src={PlusIcon} className="plus-icon" />
@@ -46,7 +46,7 @@ const Header = () => {
         </div>
       </div>
 
-      <h2 className="z-0 flex justify-center text-2xl title primary-title">
+      <h2 className="z-0 w-full flex justify-center text-2xl title primary-title">
          <p>NISARGKUMAR</p>
          <p>MAHYAVANSHI</p>
        </h2>
