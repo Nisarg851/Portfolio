@@ -1,19 +1,20 @@
 import "./style.css";
 import BulletPointIcon from "/bullet-point-icon.svg";
-import resume_components from "../../../public/resume_components.json";
+import resume_components from "../../utils/resume_components.json";
 import { getImageUrl } from "../../utils/image_utils";
 import { useState } from "react";
 
 const ExperienceComponent = (experience) => {
     const [organizationLogoRingSize,setOrganizationLogoRingSize] = useState(2);
+    
     return (
         <li className="ms-5"
-            onMouseEnter={() => setOrganizationLogoRingSize(4)}
+            onMouseEnter={() => setOrganizationLogoRingSize(6)}
             onMouseLeave={() => setOrganizationLogoRingSize(2)}
         >            
-            <span className={`absolute mt-0.5 flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-${organizationLogoRingSize} ${experience.experience.duration.end=="Present" ? "ring-[#00ff00]" : "ring-[#0077b5]"}`}>
+            <span className={`absolute mt-0.5 flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-[${organizationLogoRingSize}px] ${experience.experience.duration.end=="Present" ? "ring-[#00ff00]" : "ring-[#0077b5]"}`}>
                 <img src={getImageUrl(experience.experience.organization)} alt={experience.experience.organization} 
-                className="bg-white rounded-xl p-0.5"/>
+                className="bg-white rounded-2xl p-0.5"/>
             </span>
             <h3 className="flex justify-between items-center text-lg font-semibold text-gray-900 dark:text-black">
                 <i>{experience.experience.role}</i> 
@@ -50,7 +51,7 @@ const WorkExperience = () => {
             </h2>
             {/* <hr/> */}
             <div className="h-[95%] overflow-y-scroll">
-                <ol className="mx-4 py-2 relative border-l-[1.5px] border-black">
+                <ol className="mx-5 py-2 relative border-l-[1.5px] border-black">
                     {resume_components.work_experience.map((experience, index) => {
                         return <ExperienceComponent key={index} experience={experience}/>
                     })}

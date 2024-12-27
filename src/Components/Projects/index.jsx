@@ -1,6 +1,6 @@
 import "./style.css";
 import ProjectCard from "./ProjectCard";
-import resume_components from "../../../public/resume_components.json";
+import resume_components from "../../utils/resume_components.json";
 
 const Projects = () => {
     return (

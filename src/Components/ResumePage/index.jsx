@@ -4,6 +4,7 @@ import WorkExperience from "../WorkExperience";
 import Projects from "../Projects";
 
 import { useRef, useEffect } from "react";
+import Skills from "../Skills";
 
 const ResumePage = () => {
 
@@ -36,6 +37,7 @@ const ResumePage = () => {
     return (
         <div ref={containerRef} className='my-4 p-2 w-[45vw] h-[95vh] border-2 border-black overflow-y-scroll flex flex-col gap-5'>
             <Header className="component" />
+            <Skills className="component"/>
             <WorkExperience className="component"/>
             <Projects className="component"/>
         </div>
