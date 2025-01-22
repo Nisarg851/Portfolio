@@ -8,10 +8,10 @@
     },
     "summary": "Results-oriented DevOps Engineer with a strong foundation in cloud infrastructure, automation, and CI/CD pipelines. Proven ability to design, implement, and optimize cloud-based solutions using AWS. Expertise in infrastructure as code, containerization, and scripting languages. Passionate about delivering efficient and reliable systems. Seeking a challenging role to leverage technical skills and contribute to high-performing DevOps teams.",
     "skills_and_tools": {
-      "languages": ["C", "C++", "Java", "Kotlin", "Javascript", "Typescript", "Python", "Go", "Bash", "Power-shell"],
-      "cloud_and_devops_tools": ["AWS", "Azure", "Linux (Redhat)", "Git", "Jenkins", "Docker", "Docker Compose", "Kubernetes", "Terraform", "Ansible", "Sonarqube", "Github Actions", "CircleCI", "Prometheus", "Grafana"],
-      "web_development": ["React.js", "Node.js", "FastAPI", "Django", "Flask", "AWS Amplify", "Firebase", "Nginx", "Apache", "REST", "GraphQL"],
-      "databases": ["MySQL", "Postgres", "MongoDB", "Microsoft SQL", "Redis"]
+      "languages": [{"cpp":"C / Cpp"}, {"java":"Java"}, {"kotlin":"Kotlin"}, {"javascript":"Javascript"}, {"typescript":"Typescript"}, {"python":"Python"}, {"go":"Go"}, {"bash":"Bash"}, {"powershell":"Power-shell"}],
+      "cloud_and_devops_tools": [{"aws":"AWS"}, {"azure":"Azure"}, {"linux":"Linux (Redhat)"}, {"git":"Git"}, {"jenkins":"Jenkins"}, {"docker":"Docker"}, {"docker_compose":"Docker Compose"}, {"kubernetes":"Kubernetes"}, {"terraform":"Terraform"}, {"ansible":"Ansible"}, {"sonarqube":"Sonarqube"}, {"github_actions":"Github Actions"}, {"circleci":"CircleCI"}, {"prometheus":"Prometheus"}, {"grafana":"Grafana"}],
+      "web_development": [{"react":"React.js"}, {"node":"Node.js"}, {"fastapi":"FastAPI"}, {"django":"Django"}, {"flask":"Flask"}, {"amplify":"AWS Amplify"}, {"firebase":"Firebase"}, {"nginx":"Nginx"}, {"apache":"Apache"}, {"rest":"REST"}, {"graphql":"GraphQL"}],
+      "databases": [{"mysql":"MySQL"}, {"postgres":"Postgres"}, {"mongodb":"MongoDB"}, {"ms_sql":"Microsoft SQL"}, {"redis":"Redis"}]
     },
     "work_experience": [
       {
@@ -56,7 +56,8 @@
         "tags": [{"azure":"Azure"}, 
           {"terraform":"Terraform"}, 
           {"ansible":"Ansible"}, 
-          {"solution_architect":"Soln. Arch"}, {"iac":"IaC"}]
+          {"solution_architect":"Soln. Arch"}, 
+          {"iac":"IaC"}]
       },
       {
         "name": "Book Review Web App",

@@ -1,0 +1,11 @@
+[
+    {
+        "name": "Azure Infrastructure Automation with Terraform and Ansible",
+        "description": "Designed and implemented an optimized Azure infrastructure using Terraform and Ansible, provisioning Linux and Windows VMs, load balancing, and database services.",
+        "blog_link": "https://github.com/Nisarg851/N01579649_Terraform_Azure_Infra",
+        "tags": [{"azure":"Azure"}, 
+          {"terraform":"Terraform"}, 
+          {"ansible":"Ansible"}, 
+          {"solution_architect":"Soln. Arch"}, {"iac":"IaC"}]
+    }
+]

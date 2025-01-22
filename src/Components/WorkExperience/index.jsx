@@ -2,19 +2,13 @@ import "./style.css";
 import BulletPointIcon from "/bullet-point-icon.svg";
 import resume_components from "../../utils/resume_components.json";
 import { getImageUrl } from "../../utils/image_utils";
-import { useState } from "react";
 
 const ExperienceComponent = (experience) => {
-    const [organizationLogoRingSize,setOrganizationLogoRingSize] = useState(3);
-    
     return (
-        <li className="ms-5"
-            onMouseEnter={() => setOrganizationLogoRingSize(4)}
-            onMouseLeave={() => setOrganizationLogoRingSize(3)}
-        >            
-            {/* <span className={`absolute mt-0.5 flex items-center justify-center w-6 h-6 rounded-full -start-3 border-[${organizationLogoRingSize}px] ${experience.experience.duration.end=="Present" ? "border-[#00ff00]" : "border-[#0077b5]"}`}> */}
-            <span className={`absolute p-[${organizationLogoRingSize-1}px] mt-0.5 flex items-center justify-center w-${organizationLogoRingSize*2} h-${organizationLogoRingSize*2} rounded-full -start-${organizationLogoRingSize} ${experience.experience.duration.end=="Present" ? "bg-[#00ff00]" : "bg-[#0077b5]"}`}>
-                <img src={getImageUrl(experience.experience.organization)} alt={experience.experience.organization} 
+        <li className="ms-5">          
+            <span className={`absolute w-6 h-6 rounded-full -start-3 border-2 overflow-clip
+                ${experience.experience.duration.end=="Present" ? "border-[#00ff00]" : "border-[#0077b5]"}`}>
+                <img src={getImageUrl("../assets/organizational_logos",experience.experience.organization,"png")} alt={experience.experience.organization} 
                 className="bg-white rounded-2xl p-0.5"/>
             </span>
             <h3 className="flex justify-between items-center text-lg font-semibold text-gray-900 dark:text-black">

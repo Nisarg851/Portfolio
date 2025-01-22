@@ -9,7 +9,7 @@ const Header = () => {
   const ContactLinks = [
     {"icon": MailIcon,
       "title": "Mail",
-      "link": "",
+      "link": "/contact-me",
       "css_theme": "mail"
     },
     {"icon": GitHubIcon,
