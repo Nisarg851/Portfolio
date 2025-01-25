@@ -35,7 +35,7 @@ const ResumePage = () => {
     }, []);
 
     return (
-        <div ref={containerRef} className='lg:my-4 p-2 w-full lg:w-[45vw] h-full lg:h-[95vh] border-2 border-black overflow-y-scroll flex flex-col gap-2 lg:gap-4'>
+        <div ref={containerRef} className='lg:my-4 p-2 w-full lg:w-[45vw] h-full lg:h-[95vh] border-[1px] border-black rounded-sm overflow-y-scroll flex flex-col gap-2 lg:gap-4'>
             <Header />
             <Skills/>
             <WorkExperience/>

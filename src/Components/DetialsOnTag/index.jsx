@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import "./style.css";
 
+import ResumeProfileIcon from "/resume-profile-icon.svg";
+
 import projects from "../../utils/projects.json";
 import blogs from "../../utils/blogs.json";
 
@@ -27,11 +29,14 @@ const DetailsOnTag = () => {
 
     return (
         <div className="w-full h-full">
-            <h2 className="z-0 w-full flex justify-center text-2xl title primary-title">
-                {searchParams.get('value').split(" ").map((item, index)=>{
-                    return (<p key={index}>{item.toUpperCase()}</p>);
-                })}
-            </h2>
+            <div className="flex">
+                <a href="/" className="p-1"><img src={ResumeProfileIcon} alt="resume" /></a>
+                <h1 className="w-full flex justify-center text-2xl title primary-title">
+                    {searchParams.get('value').split(" ").map((item, index)=>{
+                        return (<p key={index}>{item.toUpperCase()}</p>);
+                    })}
+                </h1>
+            </div>
             <div className="mt-2 p-1.5 w-full flex rounded-sm bg-[#f5f5f5] text-[#B9B9BD] cursor-pointer">
                 {["Projects","Blogs"].map((item, index) => {
                     return (<span key={index} 

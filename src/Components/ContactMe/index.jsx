@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import ResumeProfileIcon from "/resume-profile-icon.svg";
 
 const getCurrentDateTimeString = () => {
     const now = new Date();
@@ -42,7 +43,7 @@ const getCurrentDateTimeString = () => {
 const ContactMe = () => {
 
     const [dateTime, setDateTime] = useState(getCurrentDateTimeString());
-    const [emailError, setEmailError] = useState(false);
+    const [emailError, setEmailError] = useState("");
     const form = useRef(null);
 
     useEffect(() => {
@@ -55,6 +56,15 @@ const ContactMe = () => {
 
     const formHandler = async (event) => {
         event.preventDefault();
+        const formData =  Object.fromEntries(new FormData(event.target));
+        const email = formData["from_name"];
+        const message = formData["message"];
+
+        if(email=="" || message==""){
+            setEmailError(`Please Enter a valid ${email=="" ? "Email" : "Message"}`);
+            return;
+        }
+
         await emailjs.sendForm(
                     import.meta.env.VITE_EMAIL_SERVICE_ID, 
                     import.meta.env.VITE_EMAIL_TEMPLATE_ID, 
@@ -67,30 +77,33 @@ const ContactMe = () => {
                     console.log("Email sent!")
                 }, err => {
                     setEmailError(true);
-                    console.log(err.text);
+                    console.log("Error: ",err);
                 });
     }
 
     return (
-        <div className="w-full h-full">
-            <h2 className="z-0 w-full flex justify-center text-2xl title primary-title">
-                <p>CONTACT</p>
-                <img src={getImageUrl("../assets/","mail","gif")} alt="Contact Me" className="m-2 w-[8%] rounded-full"/>
-            </h2>
+        <div className="w-full h-[100vh]">
+            <div className="flex">
+                <a href="/" className="py-2"><img src={ResumeProfileIcon} alt="resume" /></a>
+                <h2 className="w-full flex justify-center text-2xl title primary-title">
+                    <p>CONTACT</p>
+                    <img src={getImageUrl("../assets/","mail","gif")} alt="Contact Me" className="m-2 w-[8%] rounded-full"/>
+                </h2>
+            </div>
             <form ref={form} onSubmit={formHandler} className="w-full h-[80%]">
-                <h1 className={`mb-1 py-1 text-center bg-red-600 text-white ${emailError ? "block" : "hidden"}`}>Something went wrong, Please try again!</h1>
-                <div className="py-1 highlight w-full h-[12%] flex">
-                    <img src={getImageUrl("../assets/","user_profile","gif")} alt="user profile" className="m-1 h-[90%] rounded-full highlight"/>
-                    <div className="px-3 w-full">
-                        <div className="flex justify-between">
-                            <input name="from_name" type="email" placeholder="Your Email"/>
-                            <span>{dateTime}</span>
+                <h1 className={`mb-1 py-1 text-center bg-red-500 text-white rounded-sm ${emailError!="" ? "block" : "hidden"}`}>{emailError}</h1>
+                <div className="mb-1 py-1 md:border-[1px] border-black rounded-sm w-full h-fit flex flex-col md:flex-row items-center">
+                    <img src={getImageUrl("../assets/","user_profile","gif")} alt="user profile" className="m-1 w-[12%] md:w-[8%] rounded-full highlight"/>
+                    <div className="px-1 w-full">
+                        <div className="flex justify-between flex-col-reverse md:flex-row">
+                            <input name="from_name" type="email" placeholder="Your Email" className="mt-4 md:m-0"/>
+                            <span className="text-center">{dateTime}</span>
                         </div>
                         <span><b>To:</b> nisargkumar.dev@gmail.com</span>
                     </div>
                 </div>
-                <div className="w-full h-[90%] flex flex-col justify-center items-start">
-                    <textarea name="message" placeholder="Message" className="p-2 highlight w-full h-full"></textarea>
+                <div className="w-full h-[60%] flex flex-col justify-center items-start">
+                    <textarea name="message" placeholder="Message" className="p-2 highlight rounded-sm w-full h-full"></textarea>
                     <button className="button">
                         <div className="state state--default">
                             <div className="icon">

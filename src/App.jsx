@@ -7,8 +7,8 @@ import DetailsContainer from './Components/DetailsContainer';
 function App() {
   return (
     <BrowserRouter>
-      <div className='highlight w-full flex justify-center items-center gap-4'>
-        <ResumePage/>
+      <div className='w-full flex justify-center items-center gap-4'>
+        <div className='hidden md:block'> <ResumePage/> </div>
         <DetailsContainer/>
       </div>
     </BrowserRouter>
