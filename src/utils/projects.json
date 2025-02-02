@@ -7,7 +7,7 @@
         "tags": [{"azure":"Azure"}, 
           {"terraform":"Terraform"}, 
           {"ansible":"Ansible"}, 
-          {"solution_architect":"Soln. Arch"}, {"iac":"IaC"}]
+          {"solution_architect":"Solution Architect"}, {"iac":"IaC"}]
     },
     {
         "name": "Book Review Web App",
@@ -15,9 +15,11 @@
         "source_code": "https://github.com/Nisarg851/virtualization-book-review",
         "implementation_link": "#",
         "tags": [{"python":"Python"}, 
+        {"django":"Django"},
         {"docker":"Docker"}, 
         {"aws":"AWS"}, 
-        {"jenkins":"Jenkins"}, 
+        {"jenkins":"Jenkins"},
+        {"sonarqube":"Sonarqube"}, 
         {"postgres":"Postgres"}]
     },
     {
@@ -29,5 +31,264 @@
         {"ai":"AI"}, 
         {"ml":"Machine Learning"}, 
         {"preprocessing":"Data Preprocessing"}, {"visulization":"Visulization"}]
+    },
+    {
+        "name": "Humber Hawkbot: Backend",
+        "description": "Developed the backend application for Humber Hawkbot, a chatbot providing seamless navigation of resources for students and faculty, leveraging FastAPI and NLP techniques.",
+        "source_code": "https://github.com/Nisarg851/HumberChatbotBackend",
+        "implementation_link": "#",
+        "tags": [{"python":"Python"},
+        {"fastapi":"FastAPI"},
+        {"ai":"Artificial Intelligence"},
+        {"nlp":"Natural Language Processing"},
+        {"preprocessing":"Data Preprocessing"},
+        {"backend":"Backend"}]
+    },
+    {
+        "name": "Humber Hawkbot: Frontend",
+        "description": "Designed and implemented the frontend for Humber Hawkbot, utilizing React, TypeScript, and Tailwind for an intuitive user interface with integrated AI capabilities.",
+        "source_code": "https://github.com/Nisarg851/HumberChatbot",
+        "implementation_link": "#",
+        "tags": [{"react":"React"},
+        {"typescript":"Typescript"},
+        {"javascript":"Javascript"},
+        {"tailwind":"Tailwind"},
+        {"css":"CSS"},
+        {"github_actions":"Github Actions"},
+        {"ai":"Artificial Intelligence"},
+        {"nlp":"Natural Language Processing"},
+        {"frontend":"Frontend"}]
+    },
+    {
+        "name": "StarGazer",
+        "description": "Developed a Convolutional Neural Network (CNN) model for classifying star constellations, featuring data preprocessing and visualization.",
+        "source_code": "https://github.com/Nisarg851/StarGazer",
+        "implementation_link": "#",
+        "tags": [{"python":"Python"},
+        {"ai":"Artificial Intelligence"},
+        {"visulization":"Data Visulization"},
+        {"ml":"Machine Learning"},
+        {"preprocessing":"Data Preprocessing"}]
+    },
+    {
+        "name": "Apptist",
+        "description": "Built an educational platform for Apptist.ca using AWS Amplify and GraphQL, ensuring scalable and efficient solution architecture.",
+        "source_code": "https://github.com/Nisarg851/ApptistSRC",
+        "implementation_link": "#",
+        "tags": [{"react":"React"},
+        {"javascript":"Javascript"},
+        {"css":"CSS"},
+        {"aws":"AWS"},
+        {"amplify":"AWS Amplify"},
+        {"solution_architect":"Solution Architect"},
+        {"graphql":"GraphQL"},
+        {"backend":"Backend"},
+        {"frontend":"Frontend"}]
+    },
+    {
+        "name": "Con-Fusion",
+        "description": "Developed a responsive online portfolio website for a restaurant, showcasing their menu, services and offers ",
+        "source_code": "https://github.com/Nisarg851/conFusion",
+        "implementation_link": "#",
+        "tags": [{"javascript":"Javascript"},
+        {"bootstrap":"Bootstrap"},
+        {"css":"CSS"},
+        {"scss":"SCSS"},
+        {"less":"Less"},
+        {"frontend":"Frontend"},
+        {"freelance":"Freelance"}]
+    },
+    {
+        "name": "Retrofit: Open Source Contri.",
+        "description": "Contributed to the open-source Java library Retrofit, enhancing its API interface-to-callable object conversion capabilities for Android development.",
+        "source_code": "https://github.com/Nisarg851/retrofit",
+        "implementation_link": "#",
+        "tags": [{"java":"JAVA"},
+        {"kotlin":"Kotlin"},
+        {"android":"Android"},
+        {"mobile":"Mobile Development"},
+        {"opensource":"OpenSource Contributions"}]
+    },
+    {
+        "name": "Feel The Notes: Lecturing Platform",
+        "description": "Developed a real-time meeting platform for Feel The Notes, an institute dedicated to teaching music, incorporating WebSocket protocol for seamless interaction.",
+        "source_code": "https://github.com/Nisarg851/FeelTheNote-Lecture-Platform",
+        "implementation_link": "#",
+        "tags": [{"javascript":"Javascript"},
+        {"websocket":"Websocket Protocol"},
+        {"scss":"SCSS"},
+        {"css":"CSS"},
+        {"node":"Node.js"},
+        {"ssr":"Server Side Rendering"},
+        {"frontend":"Frontend"},
+        {"backend":"Backend"},
+        {"freelance":"Freelance"}]
+    },
+    {
+        "name": "Farm Trades",
+        "description": "Developed a platform enabling farmers and vendors to trade directly without intermediaries, utilizing Node.js and MongoDB for server-side rendering and data management.",
+        "source_code": "https://github.com/Nisarg851/Farm-Trades",
+        "implementation_link": "https://nisarg851.github.io/Farm-Trades",
+        "tags": [{"javascript":"Javascript"},
+        {"css":"CSS"},
+        {"node":"Node.js"},
+        {"mongoose":"MongoDB"},
+        {"ssr":"Server Side Rendering"},
+        {"backend":"Backend"},
+        {"github_actions":"Github Actions"},
+        {"frontend":"Frontend"}]
+    },
+    {
+        "name": "Feel The Notes: Mobile APP",
+        "description": "Designed and developed a comprehensive mobile application for an online music teaching institute. Integrated interactive features for learning music, such as video lessons, quizzes, and progress tracking, using Java and Android technologies.",
+        "source_code": "https://github.com/Nisarg851/FeelTheNotes",
+        "implementation_link": "#",
+        "tags": [{"java":"JAVA"},
+        {"android":"Android"},
+        {"mobile":"Mobile Development"},
+        {"frontend":"Frontend"},
+        {"freelance":"Freelance"}]
+    },
+    {
+        "name": "LeetCode: DSA",
+        "description": "Curated and solved an extensive collection of data structure and algorithm problems. The repository serves as a comprehensive guide for mastering concepts in DSA with optimized solutions",
+        "source_code": "https://github.com/Nisarg851/LeetCode",
+        "implementation_link": "#",
+        "tags": [{"cpp":"C / CPP"},
+        {"dsa":"Data Structure and Algorithm"}]
+    },
+    {
+        "name": "CryptoDapp",
+        "description": "Developed a decentralized application for seamless cryptocurrency exchange. Leveraged blockchain technology and Solidity for smart contracts, with an intuitive frontend using JavaScript and CSS.",
+        "source_code": "https://github.com/Nisarg851/cryptoDapp",
+        "implementation_link": "#",
+        "tags": [{"javascript":"Javascript"},
+        {"frontend":"Frontend"},
+        {"css":"CSS"},
+        {"blockchain":"Blockchain"},
+        {"solidity":"Solidity"}]
+    },
+    {
+        "name": "Android: Kotlin best practices",
+        "description": "Developed a series of small-scale projects adhering to Kotlin's best practices for Android development. Focused on clean architecture, efficient coding standards, and performance optimization.",
+        "source_code": "https://github.com/Nisarg851/AndroidKotlin",
+        "implementation_link": "#",
+        "tags": [{"kotlin":"Kotlin"},
+        {"android":"Android"},
+        {"mobile":"Mobile Development"},
+        {"frontend":"Frontend"}]
+    },
+    {
+        "name": "Quotify",
+        "description": "Built a minimalistic mobile application delivering daily motivational quotes. Ensured an engaging user interface and smooth navigation using Kotlin and Android.",
+        "source_code": "https://github.com/Nisarg851/Quotify",
+        "implementation_link": "#",
+        "tags": [{"kotlin":"Kotlin"},
+        {"android":"Android"},
+        {"mobile":"Mobile Development"},
+        {"frontend":"Frontend"}]
+    },
+    {
+        "name": "Voyager",
+        "description": "Created a basic Android application in Kotlin, focusing on foundational mobile app development practices and an intuitive user experience.",
+        "source_code": "https://github.com/Nisarg851/Voyager",
+        "implementation_link": "#",
+        "tags": [{"kotlin":"Kotlin"},
+        {"android":"Android"},
+        {"mobile":"Mobile Development"},
+        {"frontend":"Frontend"}]
+    },
+    {
+        "name": "Solidity 101",
+        "description": "Compiled a comprehensive collection of smart contracts ranging from basic to advanced levels. This repository acts as a learning resource for Ethereum blockchain development using Solidity.",
+        "source_code": "https://github.com/Nisarg851/Solidity101",
+        "implementation_link": "#",
+        "tags": [{"blockchain":"Blockchain"},
+        {"solidity":"Solidity"},
+        {"backend":"Backend"}]
+    },
+    {
+        "name": "JetpackUnleased",
+        "description": "Explored and implemented features of the Jetpack suite for Android development. Focused on leveraging modern libraries like ViewModel, LiveData, and Navigation for robust mobile applications.",
+        "source_code": "https://github.com/Nisarg851/JetpackUnleased",
+        "implementation_link": "#",
+        "tags": [{"kotlin":"Kotlin"},
+        {"android":"Android"},
+        {"mobile":"Mobile Development"},
+        {"frontend":"Frontend"}]
+    },
+    {
+        "name": "fireship.io: Open Source Contri.",
+        "description": "Contributed to the Fireship.io open-source codebase, enhancing features and fixing bugs. Worked extensively with TypeScript, SCSS, and JavaScript for scalable frontend improvements.",
+        "source_code": "https://github.com/Nisarg851/fireship.io",
+        "implementation_link": "#",
+        "tags": [{"typescript":"Typescript"},
+        {"jypescript":"Jypescript"},
+        {"scss":"SCSS"},
+        {"frontend":"Frontend"},
+        {"opensource":"OpenSource Contributions"}]
+    },
+    {
+        "name": "Android Image-Library Testing",
+        "description": "Conducted a comparative analysis of Coil and Glide, two leading Android image processing libraries. Delivered insights on performance, usability, and efficiency through a well-documented project.",
+        "source_code": "https://github.com/Nisarg851/AndroidImageLibraryTesting",
+        "implementation_link": "#",
+        "tags": [{"java":"JAVA"},
+        {"android":"Android"},
+        {"mobile":"Mobile Development"},
+        {"frontend":"Frontend"}]
+    },
+    {
+        "name": "LocusLogs Module",
+        "description": "Developed modular solutions for LocusLogs, a startup offering vehicle tracking services. Leveraged Java and Android frameworks to implement reliable and scalable modules.",
+        "source_code": "https://github.com/Nisarg851/LocusLogsModules",
+        "implementation_link": "#",
+        "tags": [{"java":"JAVA"},
+        {"android":"Android"},
+        {"mobile":"Mobile Development"},
+        {"frontend":"Frontend"}]
+    },
+    {
+        "name": "Lazygit: Open Source Contri.",
+        "description": "Designed a simple terminal-based UI for Git commands using Go and the gocui library. Focused on providing a user-friendly and efficient command-line experience.",
+        "source_code": "https://github.com/Nisarg851/lazygit",
+        "implementation_link": "#",
+        "tags": [{"go":"Go"},
+        {"bash":"Bash"},
+        {"opensource":"OpenSource Contributions"}]
+    },
+    {
+        "name": "DiverseDarkroom",
+        "description": "Built a responsive and dynamic portfolio website for DiverseDarkroom, a photography service provider. Utilized Python, Django, and CSS for server-side rendering and frontend development.",
+        "source_code": "https://github.com/Nisarg851/Diverse_darkroom",
+        "implementation_link": "#",
+        "tags": [{"jypescript":"Jypescript"},
+        {"python":"Python"},
+        {"django":"Django"},
+        {"css":"CSS"},
+        {"frontend":"Frontend"},
+        {"backend":"Backend"},
+        {"ssr":"Server Side Rendering"},
+        {"freelance":"Freelance"}]
+    },
+    {
+        "name": "Lexical Analyzer",
+        "description": "Developed a basic lexical analyzer in C to identify tokens in C-language code. Emphasized efficient parsing techniques and robust error handling.",
+        "source_code": "https://github.com/Nisarg851/Lexical-Analyzer",
+        "implementation_link": "#",
+        "tags": [{"cpp":"C / CPP"}]
+    },
+    {
+        "name": "Django: Open Source Contri.",
+        "description": "Contributed to the Django backend framework by enhancing core features and resolving issues. Focused on improving scalability and reliability using Python, CSS, and Bash scripting.",
+        "source_code": "https://github.com/Nisarg851/django",
+        "implementation_link": "#",
+        "tags": [{"jypescript":"Jypescript"},
+        {"python":"Python"},
+        {"django":"Django"},
+        {"css":"CSS"},
+        {"bash":"Bash"},
+        {"backend":"Backend"},
+        {"opensource":"OpenSource Contributions"}]
     }
 ]

@@ -22,10 +22,18 @@ const DetailsOnTag = () => {
     const [projectList, setProjectList] = useState([]);
     const [blogList, setBlogList] = useState([]);
 
+    const activeStateList = {
+        "Projects" : projectList,
+        "Blogs" : blogList
+    }
+
     useEffect(()=>{
-        setProjectList(projects.filter(obj => obj.tags.some(tag => tag[searchParams.get("key")])));
+        const tempProjList = projects.filter(obj => obj.tags.some(tag => tag[searchParams.get("key")])); 
+        setActiveState(tempProjList.length > 0 ? "Projects" : "Blogs");
+        setProjectList(tempProjList);
         setBlogList(blogs.filter(obj => obj.tags.some(tag => tag[searchParams.get("key")])));
-    },[searchParams]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[]);
 
     return (
         <div className="w-full h-full">
@@ -37,15 +45,17 @@ const DetailsOnTag = () => {
                     })}
                 </h1>
             </div>
-            <div className="mt-2 p-1.5 w-full flex rounded-sm bg-[#f5f5f5] text-[#B9B9BD] cursor-pointer">
+            <div className={`mt-2 p-1.5 w-full flex rounded-sm bg-[#f5f5f5] text-[#B9B9BD]`}>
                 {["Projects","Blogs"].map((item, index) => {
                     return (<span key={index} 
-                        className={`w-full h-full text-center text-xl ${activeState===item && "active-tag"}`}
-                        onClick={()=>{ setActiveState(item); }}>{item}</span>);
+                                className={`w-full h-full text-center text-xl ${activeState===item && "active-tag"} ${(activeStateList[item].length > 0) && "cursor-pointer"}`}
+                                onClick={()=>{ if(activeStateList[item].length > 0){setActiveState(item);} }}>
+                                    {item} ({item=="Projects" ? projectList.length : blogList.length})
+                            </span>);
                 })}
             </div>
             <div className="mt-1 w-full h-full border-t-2 border-t-black overflow-y-scroll">
-                {(activeState=="Projects" ? projectList : blogList).map((content, index) => {
+                {(activeStateList[activeState]).map((content, index) => {
                     return (activeState=="Projects" 
                         ? <ProjectDetailView key={index} project={content}/> 
                         : <Blog key={index} blog={content}/>);

@@ -1,3 +1,31 @@
-a0 - make a side display to showcase work and projects
-a1 - write a small blog on how to tasks from the work experience was completed.
-a2 - make the bullet point in work experience pop on hover and show the blog in the side display when clicked (blog referenced in task a1)
+- mark all projects for git
+
+- move notes projects in blogs
+
+more projects on following tags
+power-shell: imp - write blogs
+Linux: imp - write-blogs
+
+Azure
+Go
+Bash
+Jenkins
+Docker
+Docker-compose
+kubernetes
+terraform
+ansible
+CircleCI
+Prometheus
+Grafana
+flask
+
+
+// Previous tags
+"languages": [{"cpp":"C / Cpp"}, {"java":"Java"}, {"kotlin":"Kotlin"}, {"javascript":"Javascript"}, {"typescript":"Typescript"}, {"python":"Python"}, {"go":"Go"}, {"bash":"Bash"}, {"powershell":"Power-shell"}],
+      
+"cloud_and_devops_tools": [{"aws":"AWS"}, {"azure":"Azure"}, {"linux":"Linux (Redhat)"}, {"git":"Git"}, {"jenkins":"Jenkins"}, {"docker":"Docker"}, {"docker_compose":"Docker Compose"}, {"kubernetes":"Kubernetes"}, {"terraform":"Terraform"}, {"ansible":"Ansible"}, {"sonarqube":"Sonarqube"}, {"github_actions":"Github Actions"}, {"circleci":"CircleCI"}, {"prometheus":"Prometheus"}, {"grafana":"Grafana"}],
+      
+"web_development": [{"react":"React.js"}, {"node":"Node.js"}, {"fastapi":"FastAPI"}, {"django":"Django"}, {"flask":"Flask"}, {"amplify":"AWS Amplify"}, {"firebase":"Firebase"}, {"nginx":"Nginx"}, {"apache":"Apache"}, {"rest":"REST"}, {"graphql":"GraphQL"}],
+
+"databases": [{"mysql":"MySQL"}, {"postgres":"Postgres"}, {"mongodb":"MongoDB"}, {"ms_sql":"Microsoft SQL"}, {"redis":"Redis"}]

@@ -8,10 +8,62 @@
     },
     "summary": "Results-oriented DevOps Engineer with a strong foundation in cloud infrastructure, automation, and CI/CD pipelines. Proven ability to design, implement, and optimize cloud-based solutions using AWS. Expertise in infrastructure as code, containerization, and scripting languages. Passionate about delivering efficient and reliable systems. Seeking a challenging role to leverage technical skills and contribute to high-performing DevOps teams.",
     "skills_and_tools": {
-      "languages": [{"cpp":"C / Cpp"}, {"java":"Java"}, {"kotlin":"Kotlin"}, {"javascript":"Javascript"}, {"typescript":"Typescript"}, {"python":"Python"}, {"go":"Go"}, {"bash":"Bash"}, {"powershell":"Power-shell"}],
-      "cloud_and_devops_tools": [{"aws":"AWS"}, {"azure":"Azure"}, {"linux":"Linux (Redhat)"}, {"git":"Git"}, {"jenkins":"Jenkins"}, {"docker":"Docker"}, {"docker_compose":"Docker Compose"}, {"kubernetes":"Kubernetes"}, {"terraform":"Terraform"}, {"ansible":"Ansible"}, {"sonarqube":"Sonarqube"}, {"github_actions":"Github Actions"}, {"circleci":"CircleCI"}, {"prometheus":"Prometheus"}, {"grafana":"Grafana"}],
-      "web_development": [{"react":"React.js"}, {"node":"Node.js"}, {"fastapi":"FastAPI"}, {"django":"Django"}, {"flask":"Flask"}, {"amplify":"AWS Amplify"}, {"firebase":"Firebase"}, {"nginx":"Nginx"}, {"apache":"Apache"}, {"rest":"REST"}, {"graphql":"GraphQL"}],
-      "databases": [{"mysql":"MySQL"}, {"postgres":"Postgres"}, {"mongodb":"MongoDB"}, {"ms_sql":"Microsoft SQL"}, {"redis":"Redis"}]
+      "languages": [
+        {"cpp": "C / CPP"},
+        {"python": "Python"},
+        {"java": "JAVA"},
+        {"kotlin": "Kotlin"},
+        {"javascript": "Javascript"},
+        {"typescript": "Typescript"},
+        {"solidity": "Solidity"},
+        {"go": "Go"},
+        {"bash": "Bash"},
+        {"jypescript": "Jypescript"}
+      ],
+      "cloud_and_devops_tools": [
+        {"azure": "Azure"},
+        {"terraform": "Terraform"},
+        {"ansible": "Ansible"},
+        {"docker": "Docker"},
+        {"jenkins": "Jenkins"},
+        {"sonarqube": "Sonarqube"},
+        {"kubernetes": "Kubernetes"},
+        {"github_actions": "Github Actions"},
+        {"amplify": "AWS Amplify"},
+        {"iac": "Infra as Code"},
+        {"ci_cd": "CI / CD"},
+        {"cloud": "Cloud Computing"},
+        {"cda": "Certified Developer Associate"}
+      ],
+      "web_development": [
+        {"django": "Django"},
+        {"fastapi": "FastAPI"},
+        {"react": "React"},
+        {"tailwind": "Tailwind"},
+        {"css": "CSS"},
+        {"graphql": "GraphQL"},
+        {"bootstrap": "Bootstrap"},
+        {"scss": "SCSS"},
+        {"less": "Less"},
+        {"websocket": "Websocket Protocol"},
+        {"node": "Node.js"}
+      ],
+      "databases": [
+        {"postgres": "Postgres"},
+        {"mongoose": "MongoDB"}
+      ],
+      "misc": [
+        {"solution_architect": "Solution Architect"},
+        {"ai": "AI"},
+        {"ml": "Machine Learning"},
+        {"preprocessing": "Data Preprocessing"},
+        {"visulization": "Visulization"},
+        {"nlp": "Natural Language Processing"},
+        {"mobile": "Mobile Development"},
+        {"opensource": "OpenSource Contributions"},
+        {"blockchain": "Blockchain"},
+        {"android": "Android"}
+      ]
     },
     "work_experience": [
       {
@@ -57,7 +109,7 @@
           {"terraform":"Terraform"}, 
           {"ansible":"Ansible"}, 
           {"solution_architect":"Soln. Arch"}, 
-          {"iac":"IaC"}]
+          {"iac":"Infra as Code"}]
       },
       {
         "name": "Book Review Web App",
