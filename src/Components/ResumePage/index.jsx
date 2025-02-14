@@ -5,9 +5,11 @@ import Projects from "../Projects";
 
 import { useRef, useEffect } from "react";
 import Skills from "../Skills";
+import { useLocation } from "react-router-dom";
 
 const ResumePage = () => {
 
+    const location = useLocation();
     const containerRef = useRef(null);
 
     const handleScroll = (e) => {
@@ -35,7 +37,7 @@ const ResumePage = () => {
     }, []);
 
     return (
-        <div ref={containerRef} className='lg:my-4 p-2 w-full lg:w-[45vw] h-full lg:h-[95vh] border-[1px] border-black rounded-sm overflow-y-scroll flex flex-col gap-2 lg:gap-4'>
+        <div ref={location.pathname=="/" ? containerRef : null} className='lg:my-4 p-2 w-full lg:w-[45vw] h-full lg:h-[95vh] shadow-[0_0px_12px_rgba(0,0,0,0.40)] bg-white rounded-sm overflow-y-scroll flex flex-col gap-2 lg:gap-4'>
             <Header />
             <Skills/>
             <WorkExperience/>

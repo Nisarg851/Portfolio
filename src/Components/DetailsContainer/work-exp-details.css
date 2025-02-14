@@ -1,0 +1,12 @@
+.markdown pre:has(code) {
+    padding: 8px 12px;
+    border: 1px solid black;
+    border-radius: 4px;
+    color: white;
+    background: #374151;
+}
+
+.markdown a {
+    color: #00BCFF;
+    text-decoration: underline;
+}

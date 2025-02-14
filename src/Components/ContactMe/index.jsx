@@ -84,7 +84,7 @@ const ContactMe = () => {
     return (
         <div className="w-full h-[100vh]">
             <div className="flex">
-                <a href="/" className="py-2"><img src={ResumeProfileIcon} alt="resume" /></a>
+                <a href="/" className="md:hidden py-2"><img src={ResumeProfileIcon} alt="resume" /></a>
                 <h2 className="w-full flex justify-center text-2xl title primary-title">
                     <p>CONTACT</p>
                     <img src={getImageUrl("../assets/","mail","gif")} alt="Contact Me" className="m-2 w-[8%] rounded-full"/>

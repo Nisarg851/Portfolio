@@ -38,7 +38,7 @@ const DetailsOnTag = () => {
     return (
         <div className="w-full h-full">
             <div className="flex">
-                <a href="/" className="p-1"><img src={ResumeProfileIcon} alt="resume" /></a>
+                <a href="/" className="md:hidden p-1"><img src={ResumeProfileIcon} alt="resume" /></a>
                 <h1 className="w-full flex justify-center text-2xl title primary-title">
                     {searchParams.get('value').split(" ").map((item, index)=>{
                         return (<p key={index}>{item.toUpperCase()}</p>);

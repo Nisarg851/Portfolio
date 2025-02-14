@@ -5,35 +5,37 @@ import { getImageUrl } from "../../utils/image_utils";
 
 const ExperienceComponent = (experience) => {
     return (
-        <li className="ms-5">          
-            <span className={`absolute w-6 h-6 rounded-full -start-3 border-2 overflow-clip
-                ${experience.experience.duration.end=="Present" ? "border-[#00ff00]" : "border-[#0077b5]"}`}>
-                <img src={getImageUrl("../assets/organizational_logos",experience.experience.organization,"png")} alt={experience.experience.organization} 
-                className="bg-white rounded-2xl p-0.5"/>
-            </span>
-            <h3 className="flex justify-between items-center text-lg font-semibold text-gray-900 dark:text-black">
-                <i>{experience.experience.role}</i> 
-                <time className="text-sm font-medium me-2 px-2.5 ms-2">
-                    <i>{experience.experience.duration.start} - {experience.experience.duration.end}</i>
-                </time>
-            </h3>
-            <span className="flex justify-between items-center text-sm font-normal leading-none ">
-                <i>{experience.experience.organization}</i>
-                <i className="me-2 px-2.5 py-0.5 ms-3">{experience.experience.location}</i>
-            </span>
-            <ul className="mb-4 text-base font-normal">
-                {
-                    experience.experience.responsibilities.map((responsibility, index) => {
-                        return (
-                            <li key={index} className="mx-4 flex items-start">
-                                <img  src={BulletPointIcon} className="m-1" />
-                                <span className="my-0.5 leading-none text-justify">{responsibility}</span>
-                            </li>
-                        );
-                    })
-                }
-            </ul>
-        </li>
+        <a href={`/work-experience?value=${experience.experience.organization}`}>
+            <li className="pt-2 ps-5 border-b-[0.1px] border-white work-exprience-item">
+                <span className={`absolute w-6 h-6 rounded-full -start-3 border-2 overflow-clip
+                    ${experience.experience.duration.end=="Present" ? "border-[#00ff00]" : "border-[#0077b5]"}`}>
+                    <img src={getImageUrl("../assets/organizational_logos",experience.experience.organization,"png")} alt={experience.experience.organization}
+                    className="bg-white rounded-2xl p-0.5 exclude-invert"/>
+                </span>
+                <h3 className="flex justify-between items-center text-lg font-semibold ">
+                    <i>{experience.experience.role}</i>
+                    <time className="text-sm font-medium me-2 px-2.5 ms-2">
+                        <i>{experience.experience.duration.start} - {experience.experience.duration.end}</i>
+                    </time>
+                </h3>
+                <span className="flex justify-between items-center text-sm font-normal leading-none ">
+                    <i>{experience.experience.organization}</i>
+                    <i className="me-2 px-2.5 py-0.5 ms-3">{experience.experience.location}</i>
+                </span>
+                <ul className="mb-4 text-base font-normal">
+                    {
+                        experience.experience.responsibilities.map((responsibility, index) => {
+                            return (
+                                <li key={index} className="mx-4 flex items-start">
+                                    <img  src={BulletPointIcon} className="m-1" />
+                                    <span className="my-0.5 leading-none text-justify">{responsibility}</span>
+                                </li>
+                            );
+                        })
+                    }
+                </ul>
+            </li>
+        </a>
     );
 }
 
@@ -46,7 +48,7 @@ const WorkExperience = () => {
             </h2>
             {/* <hr/> */}
             <div className="h-[95%] overflow-y-scroll">
-                <ol className="mx-5 py-2 relative border-l-[1.5px] border-black">
+                <ol className="mx-5 relative border-l-[1.5px] border-black">
                     {resume_components.work_experience.map((experience, index) => {
                         return <ExperienceComponent key={index} experience={experience}/>
                     })}

@@ -1,0 +1,13 @@
+.work-exprience-item{
+    color: black;
+    cursor: pointer;
+}
+
+.work-exprience-item:hover{
+    color: white;
+    background-color: #374151;
+}
+
+.work-exprience-item:hover img:not(.exclude-invert){
+    filter: invert(100%);
+}
