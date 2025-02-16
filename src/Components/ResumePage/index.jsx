@@ -37,7 +37,7 @@ const ResumePage = () => {
     }, []);
 
     return (
-        <div ref={location.pathname=="/" ? containerRef : null} className='lg:my-4 p-2 w-full lg:w-[45vw] h-full lg:h-[95vh] shadow-[0_0px_12px_rgba(0,0,0,0.40)] bg-white rounded-sm overflow-y-scroll flex flex-col gap-2 lg:gap-4'>
+        <div ref={location.pathname=="/" ? containerRef : null} className='lg:my-4 p-4 w-full lg:w-[45vw] h-full lg:h-[95vh] shadow-[0_0px_12px_rgba(0,0,0,0.40)] bg-white rounded-sm overflow-y-scroll flex flex-col gap-2 lg:gap-4'>
             <Header />
             <Skills/>
             <WorkExperience/>

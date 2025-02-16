@@ -46,10 +46,10 @@ const Header = () => {
         </div>
       </div>
 
-      <h2 className="z-0 w-full flex justify-center text-2xl title primary-title">
-         <p>NISARGKUMAR</p>
-         <p>MAHYAVANSHI</p>
-       </h2>
+      <a href="/profile-card" className="z-0 w-full flex justify-center text-2xl title primary-title">
+        <p>NISARGKUMAR</p>
+        <p>MAHYAVANSHI</p>
+      </a>
     </div>
   );
 };
