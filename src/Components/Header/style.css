@@ -1,3 +1,21 @@
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.title-with-redirect {
+  display: flex;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+
+.title-with-redirect p {
+  display: inline-block;
+  animation: bounce 1.5s infinite ease-in-out;
+}
+
+.title-with-redirect p:nth-child(2) { animation-delay: 0.2s; }
+
 /* Container Styles */
 .tooltip-container {
     position: relative;

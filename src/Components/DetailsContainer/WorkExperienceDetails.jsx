@@ -7,6 +7,8 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 import "./work-exp-details.css";
+import Title from "../Common/Title";
+import CustomMarkdown from "../Common/CustomMarkdown";
 
 const WorkExperienceDetails = () => {
     const location = useLocation();
@@ -25,16 +27,12 @@ const WorkExperienceDetails = () => {
 
     return <div className="w-full h-full">
                 <div className="flex">
-                    <a href="/" className="md:hidden p-1"><img src={ResumeProfileIcon} alt="resume" /></a>
-                    <h1 className="w-full flex justify-center text-2xl title primary-title underline">
-                        {searchParams.get('value').split(" ").map((item, index)=>{
-                            return (<p key={index}>{item.toUpperCase()}</p>);
-                        })}
-                    </h1>
+                    <a href="/resume" className="md:hidden p-1"><img src={ResumeProfileIcon} alt="resume" /></a>
+                    <Title title={searchParams.get("value").toUpperCase()} className="w-full flex justify-center text-2xl title primary-title underline"/>
                 </div>
-                <div className="prose markdown">
+                <div className="prose markdown pb-2">
                     <hr />
-                    <Markdown remarkPlugins={[remarkGfm]}>{markdown}</Markdown>
+                    <CustomMarkdown>{markdown}</CustomMarkdown>
                 </div>
             </div>
 }

@@ -3,25 +3,36 @@ import ContactMe from "../ContactMe";
 import DetailsOnTag from "../DetialsOnTag";
 import ResumePage from "../ResumePage";
 import WorkExperienceDetails from "./WorkExperienceDetails";
-import ProfileCard from "../ProfileCard/ProfileCard";
+import ProfileCard from "../ProfileCard/index";
+import { motion, AnimatePresence } from "framer-motion";
 
 const DetailsContainer = () => {
-    const mediumSizeScreen = 768;
     const location = useLocation();
+
     return (
-        <div className={`
-            bg-white
-            shadow-[0_0px_12px_rgba(0,0,0,0.40)]
-            ${window.innerWidth>=mediumSizeScreen && location.pathname=="/" ? "hidden" : "block"}
-            lg:my-4 p-4 w-full h-[100vh] lg:w-[45vw] lg:h-[95vh] rounded-sm overflow-y-scroll flex flex-col items-center gap-2 lg:gap-4`}>
-          <Routes>  
-            <Route path="/profile-card" element={<ProfileCard/>}/>
-            <Route path="/contact-me" element={<ContactMe/>}/>
-            <Route path="/tag/*" element={<DetailsOnTag/>}/>
-            <Route path="/work-experience/*" element={<WorkExperienceDetails/>}/>
-            <Route path="*" element={<ResumePage/>}/>
+      <motion.div
+        key={location.pathname} 
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -50 }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
+        className={`
+          bg-white shadow-[0_0px_12px_rgba(0,0,0,0.40)]
+          lg:my-4 w-full h-[100vh] lg:w-[45vw] lg:h-[95vh] overflow-y-scroll flex flex-col items-center gap-2 lg:gap-4
+          ${location.pathname !== "/resume" ? "p-4 rounded-sm" : "w-full"}
+        `}>
+
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route path="/resume" index element={<ResumePage />} />
+            <Route path="/contact-me" element={<ContactMe />} />
+            <Route path="/tag/*" element={<DetailsOnTag />} />
+            <Route path="/work-experience/*" element={<WorkExperienceDetails />} />
+            <Route path="*" element={<ProfileCard />} />
           </Routes>
-        </div>
+        </AnimatePresence>
+
+      </motion.div>
     );
 }
 

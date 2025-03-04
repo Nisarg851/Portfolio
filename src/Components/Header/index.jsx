@@ -3,6 +3,7 @@ import MailIcon from "/mail-icon.svg";
 import LinkedInIcon from "/linkedin-icon.svg";
 import GitHubIcon from "/github-icon.svg";
 import PlusIcon from "/plus-icon.svg";
+import Title from "../Common/Title";
 
 const Header = () => {
 
@@ -46,10 +47,10 @@ const Header = () => {
         </div>
       </div>
 
-      <a href="/profile-card" className="z-0 w-full flex justify-center text-2xl title primary-title">
-        <p>NISARGKUMAR</p>
-        <p>MAHYAVANSHI</p>
+      <a href="/profile-card" className="w-full">
+        <Title title="NISARGKUMAR MAHYAVANSHI" className="max-sm:mb-4 w-full flex justify-center text-xl title title primary-title title-with-redirect"/>
       </a>
+
     </div>
   );
 };

@@ -10,6 +10,7 @@ import blogs from "../../utils/blogs.json";
 import ProjectDetailView from "../Projects/ProjectDetailView";
 import Blog from "../DetailsContainer/Blog";
 import { useEffect, useMemo } from "react";
+import Title from "../Common/Title";
 
 const DetailsOnTag = () => {
     const [activeState, setActiveState] = useState("Projects");
@@ -38,12 +39,8 @@ const DetailsOnTag = () => {
     return (
         <div className="w-full h-full">
             <div className="flex">
-                <a href="/" className="md:hidden p-1"><img src={ResumeProfileIcon} alt="resume" /></a>
-                <h1 className="w-full flex justify-center text-2xl title primary-title">
-                    {searchParams.get('value').split(" ").map((item, index)=>{
-                        return (<p key={index}>{item.toUpperCase()}</p>);
-                    })}
-                </h1>
+                <a href="/resume" className="md:hidden p-1"><img src={ResumeProfileIcon} alt="resume" /></a>
+                <Title title={searchParams.get("value").toUpperCase()} className="w-full flex justify-center text-2xl title primary-title"/>
             </div>
             <div className={`mt-2 p-1.5 w-full flex rounded-sm bg-[#f5f5f5] text-[#B9B9BD]`}>
                 {["Projects","Blogs"].map((item, index) => {

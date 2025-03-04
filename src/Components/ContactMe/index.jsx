@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import ResumeProfileIcon from "/resume-profile-icon.svg";
+import Title from "../Common/Title";
 
 const getCurrentDateTimeString = () => {
     const now = new Date();
@@ -84,11 +85,8 @@ const ContactMe = () => {
     return (
         <div className="w-full h-[100vh]">
             <div className="flex">
-                <a href="/" className="md:hidden py-2"><img src={ResumeProfileIcon} alt="resume" /></a>
-                <h2 className="w-full flex justify-center text-2xl title primary-title">
-                    <p>CONTACT</p>
-                    <img src={getImageUrl("../assets/","mail","gif")} alt="Contact Me" className="m-2 w-[8%] rounded-full"/>
-                </h2>
+                <a href="/resume" className="md:hidden py-2"><img src={ResumeProfileIcon} alt="resume" /></a>
+                <Title title="CONTACT" className="mb-8 w-full flex justify-center text-2xl title primary-title"/>
             </div>
             <form ref={form} onSubmit={formHandler} className="w-full h-[80%]">
                 <h1 className={`mb-1 py-1 text-center bg-red-500 text-white rounded-sm ${emailError!="" ? "block" : "hidden"}`}>{emailError}</h1>
@@ -104,7 +102,7 @@ const ContactMe = () => {
                 </div>
                 <div className="w-full h-[60%] flex flex-col justify-center items-start">
                     <textarea name="message" placeholder="Message" className="p-2 highlight rounded-sm w-full h-full"></textarea>
-                    <button className="button">
+                    <button className="button bg-[#F8F8F8]">
                         <div className="state state--default">
                             <div className="icon">
                                 {getSVGIcon("MailSendIcon")}
