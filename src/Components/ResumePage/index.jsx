@@ -1,16 +1,14 @@
 import "./style.css"
 import Header from "../Header";
 import WorkExperience from "../WorkExperience";
-import Projects from "../Projects";
-
-// import { useRef } from "react";  
+import Projects from "../Projects"; 
 import Skills from "../Skills";
-// import { useLocation } from "react-router-dom";
 
 const ResumePage = () => {
-
     // const location = useLocation();
     // const containerRef = useRef(null);
+
+    // ** Logic to map the scrolling motion outside container with the container **
 
     // const handleScroll = (e) => {
     //     if (containerRef.current) {

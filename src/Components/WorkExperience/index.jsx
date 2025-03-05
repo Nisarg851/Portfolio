@@ -5,15 +5,15 @@ import resume_components from "../../utils/resume_components.json";
 import { getImageUrl } from "../../utils/image_utils";
 import Title from "../Common/Title";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const ExperienceComponent = ({experience, index}) => {
     const baseDelay = 0.4;
     const totalDelay = index * baseDelay;
 
     return (
-        <a href={`/work-experience?value=${experience.organization}`}>
+        <Link to={`/work-experience?org=${experience.organization}&role=${experience.role}`}>
             <motion.li className="pt-2 ps-5 pe-2 border-b-[0.1px] border-white work-exprience-item"
-            href={`/work-experience?value=${experience.organization}`}
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             whileHover={{ boxShadow: "0px 0px 20px rgba(0, 0, 0, 1)" }}
@@ -68,7 +68,7 @@ const ExperienceComponent = ({experience, index}) => {
                     }
                 </ul>
             </motion.li>
-        </a>
+        </Link>
     );
 }
 

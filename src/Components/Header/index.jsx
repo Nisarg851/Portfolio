@@ -4,6 +4,7 @@ import LinkedInIcon from "/linkedin-icon.svg";
 import GitHubIcon from "/github-icon.svg";
 import PlusIcon from "/plus-icon.svg";
 import Title from "../Common/Title";
+import { Link } from "react-router-dom";
 
 const Header = () => {
 
@@ -37,9 +38,9 @@ const Header = () => {
             <div className="social-icons">
               {ContactLinks.map((item, index) => {
                 return (
-                  <a key={index} href={item.link} className={`social-icon ${item.css_theme}`}>
+                  <Link key={index} to={item.link} className={`social-icon ${item.css_theme}`}>
                     <img src={item.icon} alt={item.title} />
-                  </a>
+                  </Link>
                 );
               })}
             </div>
@@ -47,9 +48,9 @@ const Header = () => {
         </div>
       </div>
 
-      <a href="/profile-card" className="w-full">
+      <Link to="/profile-card" className="w-full">
         <Title title="NISARGKUMAR MAHYAVANSHI" className="max-sm:mb-4 w-full flex justify-center text-xl title title primary-title title-with-redirect"/>
-      </a>
+      </Link>
 
     </div>
   );

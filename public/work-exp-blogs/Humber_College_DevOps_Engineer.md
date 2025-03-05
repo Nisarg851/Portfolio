@@ -1,4 +1,4 @@
-# Building a Scalable AI-Powered Chatbot ✨
+# Building a Scalable AI-Powered Chatbot✨
 ## Introduction
 In May 2024, I embarked on an exciting challenge at Humber College: leading a cross-functional team of five to design, develop, and deploy an AI-powered chatbot. Our goal was to deliver a scalable, secure, and efficient solution—on time and under budget. Here’s how we made it happen.  
 

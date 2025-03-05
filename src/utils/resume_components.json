@@ -66,7 +66,7 @@
     },
     "work_experience": [
       {
-        "role": "Full-stack Developer / DevOps",
+        "role": "DevOps Engineer",
         "duration": {
           "start":"May 2024",
           "end": "Present"
@@ -82,7 +82,7 @@
         ]
       },
       {
-        "role": "Full-stack Developer / Cloud Architect",
+        "role": "DevOps Engineer",
         "duration": {
           "start":"May 2023",
           "end": "Dec 2023"
@@ -95,6 +95,36 @@
           "Developed a responsive UI with React.js, leading to a 25% increase in user engagement and a smoother userexperience.",
           "Optimized deployment processes by using AWS S3 for static content hosting and CloudFront for global content delivery, cutting page load times by 50%",
           "Secured 1st place at the Humber Expo among 20 teams, recognized for innovative use of AWS services and achieving a fully cloud-native architecture."
+        ]
+      },
+      {
+        "role": "Full-stack Developer",
+        "duration": {
+          "start":"Jan 2022",
+          "end": "Apr 2023"
+        },
+        "organization": "LocusLogs",
+        "location": "Gujarat, India",
+        "responsibilities": [
+          "Achieved a 30% increase in user activity over a week by enhancing the user experience with the help of Material Design 's Guidelines for customization of UI, user adaptability, prioritization of notifications etc.",
+          "Significantly reduced business costs as measured by a 67% reduction in server maintenance bills by migrating the services to a more reliable and cheaper host. Lead a team of 4 to perform this migration which included the entire backend codebase to be shifted from .Net to Node.js for better performance and faster reponse time. Used yarn's Plug'n'Play to avoid the heavy node_module's problem",
+          "Improved Database schema in MySQL as observed from 15-17% improvement in memory-speed matrix by applying Normalization on the database to reduce the redundancies. Additionally, modified the Object-Relation Models to support this schema as well.",
+          "Improved Development lifecycle by decoupling the core modules of the application which resulted in faster version release cycle."
+        ]
+      },
+      {
+        "role": "Full-stack Developer Intern",
+        "duration": {
+          "start":"Aug 2021",
+          "end": "Dec 2021"
+        },
+        "organization": "LocusLogs",
+        "location": "Gujarat, India",
+        "responsibilities": [
+          "Developed a a Java-based vehicle tracking module integrated with Android SDK with 83% accuracy measured through 135 alpha tests on the attributes like precision of locus, delay time,acceleration, pivoting angles etc. Further extended this feature to keep record of the vehicle's moment's history and replay it on maps just like a media-player.",
+          "Redefined conversion matrix in JAVA for area coverage in Geo-Fencing module, resulting in an ~75% increase in accuracy, measured with direct comparison of approx. 55 test-cases.",
+          "Implemented Dynamic vehicle report generation functionality in JAVA with offline capabilities that was embraced by 12 out of 15 Industrial consumers of the product.",
+          "Improved Development lifecycle by decoupling the core modules of the application which resulted in faster version release cycle.Suggested and applied a more test driven approach using the JUnit library for Unit testing as well as creating and conducting the UI tests for the application during the build phase. Even-though it slowed the development process, the new developed features were realised to be more reliable and secure then before."
         ]
       }
     ],

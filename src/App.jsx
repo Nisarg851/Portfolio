@@ -3,15 +3,10 @@ import './App.css';
 import ResumePage from './Components/ResumePage';
 import DetailsContainer from './Components/DetailsContainer';
 import Squares from './Components/Imported/Squares';
-import { useMemo } from "react";
-
-const MemoizedResumePage = () => {
-  return useMemo(() => <ResumePage />, []);
-};
 
 function App() {
   return (
-    
+    <BrowserRouter>
       <div className='w-full relative flex justify-center items-center gap-4'>
         <div className='absolute w-[100vw] h-[100vh] -z-10 bg-white'>
           <Squares
@@ -23,10 +18,9 @@ function App() {
           />
         </div>
         <div className='hidden md:block'> <ResumePage/> </div>
-        <BrowserRouter>
           <DetailsContainer/>
-        </BrowserRouter>
       </div>
+      </BrowserRouter>
   )
 }
 

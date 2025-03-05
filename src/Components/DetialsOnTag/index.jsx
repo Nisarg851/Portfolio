@@ -33,8 +33,7 @@ const DetailsOnTag = () => {
         setActiveState(tempProjList.length > 0 ? "Projects" : "Blogs");
         setProjectList(tempProjList);
         setBlogList(blogs.filter(obj => obj.tags.some(tag => tag[searchParams.get("key")])));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[]);
+    },[searchParams]);
 
     return (
         <div className="w-full h-full">

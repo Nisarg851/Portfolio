@@ -7,7 +7,6 @@ import "./profile-card.css";
 import Particles from "../Imported/Particle";
 
 const ProfileCard = () => {
-
     const [markdown, setMarkdown] = useState('');
     
     useEffect(()=>{

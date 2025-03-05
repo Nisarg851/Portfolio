@@ -23,8 +23,8 @@ const DetailsContainer = () => {
         `}>
 
         <AnimatePresence mode="wait">
-          <Routes location={location} key={location.pathname}>
-            <Route path="/resume" index element={<ResumePage />} />
+          <Routes>
+            <Route path="/resume" element={<ResumePage />} />
             <Route path="/contact-me" element={<ContactMe />} />
             <Route path="/tag/*" element={<DetailsOnTag />} />
             <Route path="/work-experience/*" element={<WorkExperienceDetails />} />
