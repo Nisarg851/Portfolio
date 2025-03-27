@@ -3,6 +3,7 @@ import MailIcon from "/mail-icon.svg";
 import LinkedInIcon from "/linkedin-icon.svg";
 import GitHubIcon from "/github-icon.svg";
 import PlusIcon from "/plus-icon.svg";
+import ResumeIcon from "/resume-profile-icon.svg";
 import Title from "../Common/Title";
 import { Link } from "react-router-dom";
 
@@ -23,6 +24,13 @@ const Header = () => {
       "title": "LinkedIn/nisargmahyavanshi",
       "link": "https://www.linkedin.com/in/nisargmahyavanshi/",
       "css_theme": "linkedin"
+    },
+    {"icon": ResumeIcon,
+      "title": "Resume",
+      // "link": "../../assets/resume/",
+      "link": "https://drive.google.com/drive/folders/1_nD4Wuh8hdBuPlVGATgS-CSQPv2v4tfF?usp=sharing",
+      "file": "Nisargkumar Resume.pdf",
+      "css_theme": "resume"
     }
   ]
 
@@ -38,9 +46,11 @@ const Header = () => {
             <div className="social-icons">
               {ContactLinks.map((item, index) => {
                 return (
-                  <Link key={index} to={item.link} className={`social-icon ${item.css_theme}`}>
-                    <img src={item.icon} alt={item.title} />
-                  </Link>
+                  <abbr key={index} title={item.title}>
+                    <Link to={item.link} target="_blank" className={`social-icon ${item.css_theme}`}>
+                          <img src={item.icon} alt={item.title} />
+                      </Link>
+                  </abbr>
                 );
               })}
             </div>

@@ -1,10 +1,12 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { HashRouter as Routes, Route, useLocation } from "react-router-dom";
 import ContactMe from "../ContactMe";
 import DetailsOnTag from "../DetialsOnTag";
 import ResumePage from "../ResumePage";
 import WorkExperienceDetails from "./WorkExperienceDetails";
 import ProfileCard from "../ProfileCard/index";
 import { motion, AnimatePresence } from "framer-motion";
+import WorkExperienceView from "./WorkExperiencesView";
+import AchievementAndCertView from "./AchievementAndCertView";
 
 const DetailsContainer = () => {
     const location = useLocation();
@@ -27,7 +29,9 @@ const DetailsContainer = () => {
             <Route path="/resume" element={<ResumePage />} />
             <Route path="/contact-me" element={<ContactMe />} />
             <Route path="/tag/*" element={<DetailsOnTag />} />
+            <Route path="/work-experiences" element={<WorkExperienceView/>}/>
             <Route path="/work-experience/*" element={<WorkExperienceDetails />} />
+            <Route path="/achievements-and-cert" element={<AchievementAndCertView />}/>
             <Route path="*" element={<ProfileCard />} />
           </Routes>
         </AnimatePresence>

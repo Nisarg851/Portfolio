@@ -75,10 +75,10 @@
         "location": "Toronto, ON",
         "responsibilities": [
           "Led a cross-functional team of 5 to design, develop, and deploy a scalable AI-powered chatbot, ensuring on-time delivery under budget constraints.",
-          "Built a responsive, user-friendly frontend with React.js and TypeScript, while architecting a high-performance backend using Python and FastAPI with a Serverless Architecture resulting in a 99.9% uptime and seamless user interactions.",
-          "Automated the CI/CD pipeline using GitHub Actions to manage testing, building, and deployment processes, which reduced manual deployment time by 50% and increased product reliability",
-          "Containerized applications using Docker, ensuring consistency and streamlining the development-to-production workflow, improving deployment speed and environment parity.",
-          "Implemented JWT-based authentication to enhance application security and protect sensitive user data."
+          "Built a responsive, user-friendly frontend with ***React.js*** and ***TypeScript***, while architecting a high-performance backend using ***Python*** and ***FastAPI*** with a ***Serverless Architecture*** resulting in a 99.9% uptime and seamless user interactions.",
+          "Automated the CI/CD pipeline using ***GitHub Actions*** to manage testing, building, and deployment processes, which reduced manual deployment time by 50% and increased product reliability",
+          "Containerized applications using ***Docker***, ensuring consistency and streamlining the development-to-production workflow, improving deployment speed and environment parity.",
+          "Implemented ***JWT-based*** authentication to enhance application security and protect sensitive user data."
         ]
       },
       {
@@ -90,11 +90,11 @@
         "organization": "Apptist",
         "location": "Toronto, ON",
         "responsibilities": [
-          "Migrated backend infrastructure from Node.js to AWS Amplify, leveraging AWS Cognito for multi-factor authentication (MFA) and AWS AppSync for GraphQL API management, improving scalability and data security.",
-          "Redesigned the database schema using AWS DynamoDB, reducing query response times by 30% and enhancing overall application performance.",
-          "Developed a responsive UI with React.js, leading to a 25% increase in user engagement and a smoother userexperience.",
-          "Optimized deployment processes by using AWS S3 for static content hosting and CloudFront for global content delivery, cutting page load times by 50%",
-          "Secured 1st place at the Humber Expo among 20 teams, recognized for innovative use of AWS services and achieving a fully cloud-native architecture."
+          "Migrated backend infrastructure from ***Node.js*** to ***AWS Amplify***, leveraging ***AWS Cognito*** for multi-factor authentication (MFA) and ***AWS AppSync*** for GraphQL API management, improving scalability and data security.",
+          "Redesigned the database schema using ***AWS DynamoDB***, reducing query response times by 30% and enhancing overall application performance.",
+          "Developed a responsive UI with ***React.js***, leading to a 25% increase in user engagement and a smoother userexperience.",
+          "Optimized deployment processes by using ***AWS S3*** for static content hosting and ***CloudFront*** for global content delivery, cutting page load times by 50%",
+          "***Secured 1st place at the Humber Expo among 20 teams***, recognized for innovative use of AWS services and achieving a fully ***cloud-native*** architecture."
         ]
       },
       {
@@ -106,10 +106,10 @@
         "organization": "LocusLogs",
         "location": "Gujarat, India",
         "responsibilities": [
-          "Achieved a 30% increase in user activity over a week by enhancing the user experience with the help of Material Design 's Guidelines for customization of UI, user adaptability, prioritization of notifications etc.",
-          "Significantly reduced business costs as measured by a 67% reduction in server maintenance bills by migrating the services to a more reliable and cheaper host. Lead a team of 4 to perform this migration which included the entire backend codebase to be shifted from .Net to Node.js for better performance and faster reponse time. Used yarn's Plug'n'Play to avoid the heavy node_module's problem",
-          "Improved Database schema in MySQL as observed from 15-17% improvement in memory-speed matrix by applying Normalization on the database to reduce the redundancies. Additionally, modified the Object-Relation Models to support this schema as well.",
-          "Improved Development lifecycle by decoupling the core modules of the application which resulted in faster version release cycle."
+          "Achieved a 30% increase in user activity over a week by enhancing the user experience with the help of ***Material Design's*** Guidelines for customization of UI, user adaptability, prioritization of notifications etc.",
+          "Significantly reduced business costs as measured by a 67% reduction in server maintenance bills by migrating the services to a more reliable and cheaper host. Lead a team of 4 to perform this migration which included the entire backend codebase to be shifted from .Net to ***Node.js*** for better performance and faster reponse time. Used yarn's Plug'n'Play to avoid the heavy node_module's problem",
+          "Improved Database schema in ***MySQL*** as observed from 15-17% improvement in memory-speed matrix by applying Normalization on the database to reduce the redundancies. Additionally, modified the Object-Relation Models to support this schema as well.",
+          "Improved Development lifecycle by decoupling the core JAVA modules of the application which resulted in faster version release cycle."
         ]
       },
       {
@@ -121,45 +121,25 @@
         "organization": "LocusLogs",
         "location": "Gujarat, India",
         "responsibilities": [
-          "Developed a a Java-based vehicle tracking module integrated with Android SDK with 83% accuracy measured through 135 alpha tests on the attributes like precision of locus, delay time,acceleration, pivoting angles etc. Further extended this feature to keep record of the vehicle's moment's history and replay it on maps just like a media-player.",
-          "Redefined conversion matrix in JAVA for area coverage in Geo-Fencing module, resulting in an ~75% increase in accuracy, measured with direct comparison of approx. 55 test-cases.",
+          "Developed a a Java-based vehicle tracking module integrated with ***Android SDK*** with 83% accuracy measured through 135 alpha tests on the attributes like precision of locus, delay time,acceleration, pivoting angles etc. Further extended this feature to keep record of the vehicle's moment's history and replay it on maps just like a media-player.",
+          "Redefined conversion matrix in ***JAVA*** for area coverage in Geo-Fencing module, resulting in an ~75% increase in accuracy, measured with direct comparison of approx. 55 test-cases.",
           "Implemented Dynamic vehicle report generation functionality in JAVA with offline capabilities that was embraced by 12 out of 15 Industrial consumers of the product.",
-          "Improved Development lifecycle by decoupling the core modules of the application which resulted in faster version release cycle.Suggested and applied a more test driven approach using the JUnit library for Unit testing as well as creating and conducting the UI tests for the application during the build phase. Even-though it slowed the development process, the new developed features were realised to be more reliable and secure then before."
+          "Improved Development lifecycle by decoupling the core modules of the application which resulted in faster version release cycle.Suggested and applied a more test driven approach using the ***JUnit*** library for ***Unit testing*** as well as creating and conducting the UI tests for the application during the build phase. Even-though it slowed the development process, the new developed features were realised to be more reliable and secure then before."
         ]
       }
     ],
     "projects": [
       {
-        "name": "Azure Infrastructure Automation with Terraform and Ansible",
-        "description": "Designed and implemented an optimized Azure infrastructure using Terraform and Ansible, provisioning Linux and Windows VMs, load balancing, and database services.",
-        "source_code": "https://github.com/Nisarg851/N01579649_Terraform_Azure_Infra",
+        "name": "PAWS: Platform for Anonymous Wistleblowing",
+        "description": "Expose corruption and misconduct without exposing yourself. PAWS provides a secure, anonymous platform for whistleblowers to share evidence and collaborate with others.",
+        "source_code": "https://github.com/Nisarg851/PAWS",
         "implementation_link": "#",
+        "stage": "dev",
         "tags": [{"azure":"Azure"}, 
           {"terraform":"Terraform"}, 
           {"ansible":"Ansible"}, 
           {"solution_architect":"Soln. Arch"}, 
           {"iac":"Infra as Code"}]
-      },
-      {
-        "name": "Book Review Web App",
-        "description": "Deployed a Django application on AWS with Docker and AWS RDS Postgres. Integrated robust CI/CD pipelines with Jenkins and SonarQube.",
-        "source_code": "https://github.com/Nisarg851/virtualization-book-review",
-        "implementation_link": "#",
-        "tags": [{"python":"Python"}, 
-        {"docker":"Docker"}, 
-        {"aws":"AWS"}, 
-        {"jenkins":"Jenkins"}, 
-        {"postgres":"Postgres"}]
-      },
-      {
-        "name": "End-to-End ML Pipeline on AWS SageMaker",
-        "description": "Developed a Machine Learning pipeline using AWS SageMaker for model provisioning and scaling, including preprocessing, training, and deployment.",
-        "source_code": "https://github.com/Nisarg851/virtualization-book-review",
-        "implementation_link": "#",
-        "tags": [{"aws":"AWS"}, 
-        {"ai":"AI"}, 
-        {"ml":"Machine Learning"}, 
-        {"preprocessing":"Data Preprocessing"}, {"visulization":"Visulization"}]
       },
       {
         "name": "Azure Infrastructure Automation with Terraform and Ansible",
@@ -173,10 +153,11 @@
           {"iac":"Infra as Code"}]
       },
       {
-        "name": "Book Review Web App",
+        "name": "BookFlix",
         "description": "Deployed a Django application on AWS with Docker and AWS RDS Postgres. Integrated robust CI/CD pipelines with Jenkins and SonarQube.",
-        "source_code": "https://github.com/Nisarg851/virtualization-book-review",
+        "source_code": "https://github.com/Nisarg851/BookFlix",
         "implementation_link": "#",
+        "video": "https://www.youtube.com/watch?v=HxI0NQmHrRk",
         "tags": [{"python":"Python"}, 
         {"docker":"Docker"}, 
         {"aws":"AWS"}, 

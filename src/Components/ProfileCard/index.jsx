@@ -7,6 +7,7 @@ import "./profile-card.css";
 import Particles from "../Imported/Particle";
 
 const ProfileCard = () => {
+    const [greetings, setGreetings] = useState('');
     const [markdown, setMarkdown] = useState('');
     
     useEffect(()=>{
@@ -14,6 +15,18 @@ const ProfileCard = () => {
         .then(res => res.text())
         .then(text => setMarkdown(text))
         .catch(error => console.error('Error fetching Markdown:', error));
+
+        const now = new Date();
+        const hour = now.getHours();
+        if (hour >= 5 && hour < 11) {
+            setGreetings('Good Morning! ☀️');
+        } else if (hour >= 11 && hour < 3) {
+            setGreetings('Good Afternoon! 🌤️');
+        } else if (hour >= 3 && hour < 7){
+            setGreetings('Good Evening! 🌇');
+        } else {
+            setGreetings('Good Evening! 🌆');
+        }
     },[]);
 
     const mediumScreenSize = 768;
@@ -37,6 +50,7 @@ const ProfileCard = () => {
                     <img src="https://avatars.githubusercontent.com/u/52291990" alt="Nisarg851" className="md:w-[50%]"/>
                 </div>
             </a>
+            <h1 className="text-2xl font-extrabold">{greetings}</h1>
             <div className="prose markdown">
                 <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>{markdown}</Markdown>
             </div>
