@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import Markdown from 'react-markdown';
 import remarkGfm from "remark-gfm";
 import { motion, AnimatePresence } from 'framer-motion';
 
-const CustomMarkdown = ({ children }) => {
+const CustomMarkdown = ({ children, className = "" }) => {
     const variants = {
         hidden: { opacity: 0, y: 20 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
@@ -25,13 +26,12 @@ const CustomMarkdown = ({ children }) => {
             initial="hidden"
             animate="visible"
             variants={variants}
-            className="markdown"
-          >
+            className={`markdown ${className}`}>
             <Markdown
               remarkPlugins={[remarkGfm]}
 
               components={{
-                p: ({ node, ...props }) => (<motion.p variants={variants} {...props} />),
+                p: ({ node, ...props }) => (<motion.p variants={variants} {...props} className='m-0'/>),
                 h1: ({ node, ...props }) => (
                   <motion.h1
                         variants={variants}
