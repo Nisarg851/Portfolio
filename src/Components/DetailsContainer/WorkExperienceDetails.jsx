@@ -23,7 +23,7 @@ const WorkExperienceDetails = () => {
         .catch(error => console.error('Error fetching Markdown:', error));
     },[searchParams]);
 
-    return <div className="w-full h-full">
+    return (<div className="w-full h-full">
                 <div className="flex">
                     <Link to="/resume" className="md:hidden p-1"><img src={ResumeProfileIcon} alt="resume" /></Link>
                     <Title title={searchParams.get("org").toUpperCase()} className="w-full flex justify-center text-2xl title primary-title underline"/>
@@ -32,7 +32,7 @@ const WorkExperienceDetails = () => {
                     <hr />
                     <CustomMarkdown>{markdown}</CustomMarkdown>
                 </div>
-            </div>
+            </div>)
 }
 
 export default WorkExperienceDetails;

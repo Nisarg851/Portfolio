@@ -29,10 +29,11 @@ const DetailsOnTag = () => {
     }
 
     useEffect(()=>{
-        const tempProjList = projects.filter(obj => obj.tags.some(tag => tag[searchParams.get("key")])); 
+        const key = searchParams.get("key");
+        const tempProjList = key=="all" ? projects : projects.filter(obj => obj.tags.some(tag => tag[key])); 
         setActiveState(tempProjList.length > 0 ? "Projects" : "Blogs");
         setProjectList(tempProjList);
-        setBlogList(blogs.filter(obj => obj.tags.some(tag => tag[searchParams.get("key")])));
+        setBlogList(key=="all" ? blogs : blogs.filter(obj => obj.tags.some(tag => tag[key])));
     },[searchParams]);
 
     return (
