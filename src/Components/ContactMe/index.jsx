@@ -1,5 +1,5 @@
 import "./style.css";
-import { getImageUrl } from "../../utils/image_utils";
+import UserProfileImage from "/user_profile.gif";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
@@ -91,7 +91,7 @@ const ContactMe = () => {
             <form ref={form} onSubmit={formHandler} className="w-full h-[80%]">
                 <h1 className={`mb-1 py-1 text-center bg-red-500 text-white rounded-sm ${emailError!="" ? "block" : "hidden"}`}>{emailError}</h1>
                 <div className="mb-1 py-1 md:border-[1px] border-black rounded-sm w-full h-fit flex flex-col md:flex-row items-center">
-                    <img src={getImageUrl("../assets/","user_profile","gif")} alt="user profile" className="m-1 w-[12%] md:w-[8%] rounded-full highlight"/>
+                    <img src={UserProfileImage} alt="user profile" className="m-1 w-[12%] md:w-[8%] rounded-full highlight"/>
                     <div className="px-1 w-full">
                         <div className="flex justify-between flex-col-reverse md:flex-row">
                             <input name="from_name" type="email" placeholder="Your Email" className="mt-4 md:m-0"/>

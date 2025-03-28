@@ -47,7 +47,7 @@ const Header = () => {
               {ContactLinks.map((item, index) => {
                 return (
                   <abbr key={index} title={item.title}>
-                    <Link to={item.link} target="_blank" className={`social-icon ${item.css_theme}`}>
+                    <Link to={item.link} className={`social-icon ${item.css_theme}`}>
                           <img src={item.icon} alt={item.title} />
                       </Link>
                   </abbr>

@@ -2,7 +2,6 @@ import Tag from "../Common/Tag";
 import resume_components from "../../utils/resume_components.json";
 import Title from "../Common/Title";
 import { motion, AnimatePresence } from "framer-motion";
-import { option } from "framer-motion/client";
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
