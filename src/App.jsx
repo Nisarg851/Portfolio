@@ -1,4 +1,4 @@
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import './App.css';
 import ResumePage from './Components/ResumePage';
 import DetailsContainer from './Components/DetailsContainer';
@@ -6,7 +6,7 @@ import Squares from './Components/Imported/Squares';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className='w-full relative flex justify-center items-center gap-4'>
         <div className='absolute w-[100vw] h-[100vh] -z-10 bg-white'>
           <Squares
@@ -20,7 +20,7 @@ function App() {
         <div className='hidden md:block'> <ResumePage/> </div>
           <DetailsContainer/>
       </div>
-      </BrowserRouter>
+      </HashRouter>
   )
 }
 

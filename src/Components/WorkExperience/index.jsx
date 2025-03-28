@@ -29,7 +29,7 @@ const ExperienceComponent = ({experience, index}) => {
                     className={`absolute w-6 h-6 rounded-full -start-3 border-2 overflow-clip transition-transform
                         ${experience.duration.end === "Present" ? "border-[#00ff00]" : "border-[#0077b5]"}
                         org_logo`}>
-                    <img src={getImageUrl("../assets/organizational_logos",experience.organization,"png")} alt={experience.organization}
+                    <img src={getImageUrl("./",experience.organization,"png")} alt={experience.organization}
                     className="bg-white rounded-2xl p-0.5 exclude-invert"/>
                 </span>
 
