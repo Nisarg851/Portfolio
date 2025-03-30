@@ -1,5 +1,6 @@
 import GitHubIcon from "/github-icon.svg";
 import Tag from "../Common/Tag";
+import { Link } from "react-router-dom";
 
 const ProjectDetailView = (project) => {
     return (
@@ -9,11 +10,11 @@ const ProjectDetailView = (project) => {
                     <h1 className="mt-1 leading-none hyphens-auto flex justify-between">
                         <span className="w-[70%] text-xl">{project.project.name}</span>
                         <div className="flex">
-                            <a href={project.project.source_code}
+                            <Link to={project.project.source_code}
                             className="w-fit px-0.5"
                             target="_blank">
                                 <img src={GitHubIcon} alt="link to Project" className="project-icon"/>
-                            </a>
+                            </Link>
                         </div>
                     </h1>
                 </div>

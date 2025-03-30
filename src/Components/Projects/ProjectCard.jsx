@@ -2,6 +2,7 @@ import GitHubIcon from "/github-icon.svg";
 import VideoIcon from "/video-icon.svg";
 import Tag from "../Common/Tag";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const ProjectCard = (project) => {
     return (
@@ -25,17 +26,17 @@ const ProjectCard = (project) => {
                         </abbr>
 
                         <abbr title="The Project has a demo video ▶️" className={`${project.project.video==undefined && "hidden"}`}>
-                            <a href={project.project.video} target="_blank">
+                            <Link to={project.project.video} target="_blank">
                                 <img src={VideoIcon} alt="link to video"
                                 className="project-icon"/>
-                            </a>
+                            </Link>
                         </abbr>
 
                         <abbr title="Github">
-                            <a href={project.project.source_code} target="_blank">
+                            <Link to={project.project.source_code} target="_blank">
                                 <img src={GitHubIcon} alt="link to Project"
                                 className="project-icon"/>
-                            </a>
+                            </Link>
                         </abbr>
                     </div>
 

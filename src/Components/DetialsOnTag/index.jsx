@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./style.css";
 
 import ResumeProfileIcon from "/resume-profile-icon.svg";
@@ -39,7 +39,7 @@ const DetailsOnTag = () => {
     return (
         <div className="w-full h-full">
             <div className="flex">
-                <a href="/resume" className="md:hidden p-1"><img src={ResumeProfileIcon} alt="resume" /></a>
+                <Link to="/resume" className="md:hidden p-1"><img src={ResumeProfileIcon} alt="resume" /></Link>
                 <Title title={searchParams.get("value").toUpperCase()} className="w-full flex justify-center text-2xl title primary-title"/>
             </div>
             <div className={`mt-2 p-1.5 w-full flex rounded-sm bg-[#f5f5f5] text-[#B9B9BD]`}>

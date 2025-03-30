@@ -2,7 +2,6 @@
 import "./style.css";
 import BulletPointIcon from "/bullet-point-icon.svg";
 import resume_components from "../../utils/resume_components.json";
-import { getImageUrl } from "../../utils/image_utils";
 import Title from "../Common/Title";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -26,7 +25,7 @@ const ExperienceComponent = ({experience, index}) => {
                 {/* <span className={`absolute w-6 h-6 rounded-full -start-3 border-2 overflow-clip
                     ${experience.duration.end=="Present" ? "border-[#00ff00]" : "border-[#0077b5]"}`}> */}
                 <span
-                    className={`absolute w-6 h-6 rounded-full -start-3 border-2 overflow-clip transition-transform
+                    className={`absolute w-8 h-8 md:w-6 md:h-6 rounded-full -start-4 md:-start-3 border-2 overflow-clip transition-transform
                         ${experience.duration.end === "Present" ? "border-[#00ff00]" : "border-[#0077b5]"}
                         org_logo`}>
                     {console.log("")}
@@ -36,10 +35,10 @@ const ExperienceComponent = ({experience, index}) => {
 
                 <div className="flex justify-between">
                     <div className="flex flex-col justify-between">
-                        <h3 className="text-lg font-semibold">{experience.role}</h3>
+                        <h3 className="w-full text-lg font-semibold">{experience.role}</h3>
                         <i>{experience.organization}</i>
                     </div>
-                    <span className="text-sm leading-none flex flex-col justify-evenly">
+                    <span className="text-sm leading-none flex flex-col justify-between my-2">
                         <time className="text-sm font-medium">
                             <i className="block">{experience.duration.start} - {experience.duration.end}</i>
                         </time>
@@ -89,7 +88,7 @@ const WorkExperience = () => {
             <Title title="WORK EXPERIENCE" className="flex justify-start text-xl title secondary-title" onClick={()=>{navigate("/work-experiences")}}/>
 
             <div className="h-[95%] overflow-y-scroll">
-                <ol className="mx-5 relative border-l-[1.5px] border-black">
+                <ol className="w-[94%] mx-5 relative border-l-[1.5px] border-black">
                     {resume_components.work_experience.map((experience, index) => {
                         return <ExperienceComponent key={index} experience={experience} index={index}/>
                     })}

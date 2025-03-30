@@ -6,6 +6,7 @@ import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import ResumeProfileIcon from "/resume-profile-icon.svg";
 import Title from "../Common/Title";
+import { Link } from "react-router-dom";
 
 const getCurrentDateTimeString = () => {
     const now = new Date();
@@ -85,7 +86,7 @@ const ContactMe = () => {
     return (
         <div className="w-full h-[100vh]">
             <div className="flex">
-                <a href="/resume" className="md:hidden py-2"><img src={ResumeProfileIcon} alt="resume" /></a>
+                <Link to="/resume" className="md:hidden py-2"><img src={ResumeProfileIcon} alt="resume" /></Link>
                 <Title title="CONTACT" className="mb-8 w-full flex justify-center text-2xl title primary-title"/>
             </div>
             <form ref={form} onSubmit={formHandler} className="w-full h-[80%]">

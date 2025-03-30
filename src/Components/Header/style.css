@@ -115,8 +115,8 @@
   /* Tooltip Styles */
   .tooltip-content {
     position: absolute;
-    top: 105%;
-    left: 95%;
+    top: 110%;
+    left: 90%;
     background: white;
     border-radius: 15px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
@@ -131,7 +131,7 @@
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.9);
   }
-  
+
   .tooltip-container:hover .tooltip-content {
     opacity: 1;
     visibility: visible;
@@ -286,12 +286,7 @@
     .text {
       font-size: 14px;
     }
-  
-    .tooltip-content {
-      width: 160px;
-      padding: 2px;
-    }
-  
+
     .social-icon {
       width: 34px;
       height: 34px;
@@ -303,31 +298,10 @@
     }
 
     .tooltip-container:hover .tooltip-content {
-      transform: translateX(-60%) scale(1);
+      transform: translateX(-70%) scale(1);
     }
 
   }
-  
-  /* @media (max-width: 480px) {
-    .text {
-      font-size: 14px;
-    }
-  
-    .tooltip-content {
-      width: 200px;
-      padding: 15px;
-    }
-  
-    .social-icon {
-      width: 40px;
-      height: 40px;
-    }
-  
-    .social-icon img {
-      width: 18px;
-      height: 18px;
-    }
-  } */
   
   /* Dark Mode Support */
   @media (prefers-color-scheme: dark) {

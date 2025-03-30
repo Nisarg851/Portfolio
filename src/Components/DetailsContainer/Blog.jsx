@@ -1,5 +1,6 @@
 import BlogIcon from "/blog-icon.svg";
 import Tag from "../Common/Tag";
+import { Link } from "react-router-dom";
 
 const Blog = (blog) => {
     return (
@@ -9,11 +10,11 @@ const Blog = (blog) => {
                     <h1 className="mt-1 text-xl leading-none hyphens-auto flex justify-between">
                         {blog.blog.name}
                         <div className="flex">
-                            <a href={blog.blog.source_code}
+                            <Link to={blog.blog.source_code}
                             className="px-0.5"
                             target="_blank">
                                 <img src={BlogIcon} alt="link to Project"/>
-                            </a>
+                            </Link>
                         </div>
                     </h1>
                 </div>

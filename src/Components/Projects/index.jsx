@@ -13,6 +13,7 @@ const Projects = () => {
 
     return (
         <motion.div 
+
             ref={ref}
             initial={{ opacity: 0, x: 20 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -20,7 +21,7 @@ const Projects = () => {
             <Title title="PROJECT" className="relative flex justify-start text-xl title secondary-title" onClick={()=>{navigate("/tag?key=all&value=Project")}}/>
             
             <motion.div 
-                className="-ms-4 px-4 relative py-2 w-[46vw] h-[40vh] flex justify-start items-center overflow-x-scroll scroll-smooth snap-x snap-mandatory cursor-grab"
+                className="-ms-4 ps-4 md:pe-4 relative py-2 w-[100vw] h-[40vh] md:w-[46vw] flex justify-start items-center overflow-x-scroll scroll-smooth snap-x snap-mandatory cursor-grab"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8 }}>
