@@ -4,6 +4,7 @@ import Title from "../Common/Title";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const Skills = () => {
     const navigate = useNavigate();
@@ -20,7 +21,7 @@ const Skills = () => {
         event.preventDefault();
         const foundSkill = skills.find(({ tag }) => {
             const value = Object.values(tag)[0];
-            return value === searchedValue;
+            return value.toLowerCase().includes(searchedValue.toLowerCase());
         });
 
         if(foundSkill==undefined){
@@ -31,7 +32,6 @@ const Skills = () => {
         
         const [key, value] = Object.entries(foundSkill.tag)[0];
         navigate(`/tag?key=${key}&value=${value}`);
-        console.log(key, value);
     }
 
     const toggleSearch = () => {
@@ -40,6 +40,21 @@ const Skills = () => {
           inputRef.current.focus();
         }
     };
+
+    const [isScrolling, setIsScrolling] = useState(false);
+
+    useEffect(() => {
+        let scrollTimer;
+
+        const handleScroll = () => {
+            setIsScrolling(true);
+            clearTimeout(scrollTimer);
+            scrollTimer = setTimeout(() => setIsScrolling(false), 200); // Resume after 200ms
+        };
+
+        window.addEventListener("hover", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
         <div className="h-[50%] relative overflow-clip inset-shadow-xs ">
@@ -78,12 +93,12 @@ const Skills = () => {
             
             <div className="absolute z-10 bottom-0 left-0 w-full h-16 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
             
-            <div className="h-full overflow-hidden relative">
+            <div className="h-full overflow-scroll relative">
                 <div className="absolute z-10 top-0 left-0 w-full h-8 bg-gradient-to-b from-white to-transparent pointer-events-none"></div>
-
                 <motion.div
                     className="top-0 flex flex-wrap gap-2 w-full"
-                    animate={{ y: ["0%", "-70%"] }} 
+                    // animate={{ y: ["0%", "-70%"] }} 
+                    animate={isScrolling ? {} : {y: ["0%", "-70%"]}}
                     transition={{
                         repeat: Infinity,
                         repeatType: "mirror",
@@ -98,7 +113,7 @@ const Skills = () => {
                             animate={{ scale: 1, opacity: 1 }}
                             transition={{ duration: 0.5, delay: Math.random() * 1.5 }}
                         >
-                            <Tag key={id} tag={tag} tagType={"skill"} />
+                            <Tag key={id} tag={tag} tagType={Object.values(tag)[0].toLowerCase().includes(searchedValue!="" ? searchedValue.toLowerCase() : "&&&") ? "special_skill" : "skill"} />
                         </motion.div>
                     ))}
                 </motion.div>

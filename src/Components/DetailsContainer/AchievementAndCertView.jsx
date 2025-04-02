@@ -50,7 +50,7 @@ const AchievementAndCertView = () => {
         <div className="w-full h-full">
             <div className="flex">
                 <Link to="/resume" className="md:hidden p-1"><img src={ResumeProfileIcon} alt="resume" /></Link>
-                <Title title={"CERTIFICATION AND ACHIEVEMENTS"} className="w-full flex justify-center text-2xl title primary-title underline"/>
+                <Title title={"ACHIEVEMENTS AND CERTS."} className="w-full flex justify-center text-2xl title primary-title underline"/>
             </div>
             <ul className="py-2">
                 {achievement.map((item, index) => <Achievement key={index} achievement={item}/>)}

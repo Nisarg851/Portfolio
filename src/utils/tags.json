@@ -30,7 +30,7 @@
     "bootstrap": {"icon": "bootstrap.svg", "title": "Bootstrap"},
     "scss": {"icon": "scss.svg", "title": "SCSS"},
     "less": {"icon": "less.svg", "title": "Less"},
-    "websocket": {"icon": "websocker.svg", "title": "Websocket"},
+    "websocket": {"icon": "websocket.svg", "title": "Websocket"},
     "node": {"icon": "node.svg", "title": "Node"},
     "postgres": {"icon": "postgres.svg", "title": "Postgres"},
     "mongodb": {"icon": "mongodb.svg", "title": "MongoDB"},

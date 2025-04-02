@@ -12,7 +12,7 @@ function App() {
             speed={0.5} 
             squareSize={40}
             direction='diagonal' 
-            borderColor='#000'
+            borderColor='#37415122'
             hoverFillColor='#fff'
           />
         </div>

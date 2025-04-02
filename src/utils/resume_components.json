@@ -128,53 +128,7 @@
         ]
       }
     ],
-    "projects": [
-      {
-        "name": "PAWS: Platform for Anonymous Wistleblowing",
-        "description": "Expose corruption and misconduct without exposing yourself. PAWS provides a secure, anonymous platform for whistleblowers to share evidence and collaborate with others.",
-        "source_code": "https://github.com/Nisarg851/PAWS",
-        "implementation_link": "#",
-        "stage": "dev",
-        "tags": [{"azure":"Azure"}, 
-          {"terraform":"Terraform"}, 
-          {"ansible":"Ansible"}, 
-          {"solution_architect":"Soln. Arch"}, 
-          {"iac":"Infra as Code"}]
-      },
-      {
-        "name": "Azure Infrastructure Automation with Terraform and Ansible",
-        "description": "Designed and implemented an optimized Azure infrastructure using Terraform and Ansible, provisioning Linux and Windows VMs, load balancing, and database services.",
-        "source_code": "https://github.com/Nisarg851/N01579649_Terraform_Azure_Infra",
-        "implementation_link": "#",
-        "tags": [{"azure":"Azure"}, 
-          {"terraform":"Terraform"}, 
-          {"ansible":"Ansible"}, 
-          {"solution_architect":"Soln. Arch"}, 
-          {"iac":"Infra as Code"}]
-      },
-      {
-        "name": "BookFlix",
-        "description": "Deployed a Django application on AWS with Docker and AWS RDS Postgres. Integrated robust CI/CD pipelines with Jenkins and SonarQube.",
-        "source_code": "https://github.com/Nisarg851/BookFlix",
-        "implementation_link": "#",
-        "video": "https://www.youtube.com/watch?v=HxI0NQmHrRk",
-        "tags": [{"python":"Python"}, 
-        {"docker":"Docker"}, 
-        {"aws":"AWS"}, 
-        {"jenkins":"Jenkins"}, 
-        {"postgres":"Postgres"}]
-      },
-      {
-        "name": "End-to-End ML Pipeline on AWS SageMaker",
-        "description": "Developed a Machine Learning pipeline using AWS SageMaker for model provisioning and scaling, including preprocessing, training, and deployment.",
-        "source_code": "https://github.com/Nisarg851/virtualization-book-review",
-        "implementation_link": "#",
-        "tags": [{"aws":"AWS"}, 
-        {"ai":"AI"}, 
-        {"ml":"Machine Learning"}, 
-        {"preprocessing":"Data Preprocessing"}, {"visulization":"Visulization"}]
-      }
-    ],
+    "projects": [27,1,2,3],
     "education_and_certifications": [
       {
         "qualification": "AWS Certified Developer - Associate",

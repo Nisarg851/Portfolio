@@ -1,13 +1,15 @@
 /* eslint-disable react/prop-types */
 const Title = ({title, className, onClick}) => {
     return (
-        <h1 className={className}>
+        <h1 className={`mt-2 flex flex-wrap ${className}`}>
             {
-                title.split(" ").map((str, index) => <p key={index} onClick={onClick} className="cursor-pointer">
-                    {str.split('').map((chr, index) => {
-                        return <span key={index} className="hover:text-[#4294F7] hover:font-extrabold">{chr}</span>
-                    })}
-                </p>)
+                title.split(" ").map((str, index) => 
+                    <p key={index} onClick={onClick} className="cursor-pointer">
+                        {str.split('').map((chr, index) => {
+                            return <span key={index} className="hover:text-[#4294F7] hover:font-extrabold">{chr}</span>
+                        })}
+                    </p>
+                )
             }
         </h1>
     );

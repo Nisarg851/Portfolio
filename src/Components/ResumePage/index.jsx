@@ -62,7 +62,7 @@ const ResumePage = () => {
 
     return (
         // ref={location.pathname=="/" ? containerRef : null}
-        <div className='lg:my-4 p-4 w-full lg:w-[45vw] h-full lg:h-[95vh] shadow-[0_0px_12px_rgba(0,0,0,0.40)] bg-white rounded-sm overflow-x-clip overflow-y-scroll flex flex-col gap-2 lg:gap-4'>
+        <div className='lg:my-4 px-4 py-6 w-full lg:w-[45vw] h-full lg:h-[95vh] shadow-[0_0px_12px_rgba(0,0,0,0.40)] bg-white rounded-md overflow-x-clip overflow-y-scroll flex flex-col gap-2 lg:gap-4'>
             <Suspense fallback={<Loader/>}>
                 <Header /> 
                 <Skills/>

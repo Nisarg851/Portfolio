@@ -3,6 +3,8 @@
 import React from 'react';
 import Markdown from 'react-markdown';
 import remarkGfm from "remark-gfm";
+import remarkMermaid from 'remark-mermaid-plugin';
+import rehypeRaw from 'rehype-raw';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const CustomMarkdown = ({ children, className = "" }) => {
@@ -28,8 +30,8 @@ const CustomMarkdown = ({ children, className = "" }) => {
             variants={variants}
             className={`markdown ${className}`}>
             <Markdown
-              remarkPlugins={[remarkGfm]}
-
+              remarkPlugins={[remarkGfm, remarkMermaid]}
+              rehypePlugins={[rehypeRaw]}
               components={{
                 p: ({ node, ...props }) => (<motion.p variants={variants} {...props} className='m-0'/>),
                 h1: ({ node, ...props }) => (

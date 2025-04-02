@@ -7,7 +7,7 @@ import Tag from "../Common/Tag";
 const Achievement = ({achievement}) => {
     return (
         <li>
-            <hr className="mb-1"/>
+            <hr className={`${achievement.tags!=undefined && "mb-4"}`}/>
             <div className="flex justify-between">
                 <Link target="_" to={achievement.link} className="text-lg font-semibold text-[#4285F4]">{achievement.title}</Link>
                 <i>{achievement.date}</i>
@@ -16,7 +16,7 @@ const Achievement = ({achievement}) => {
             <div className={`${achievement.description==undefined ? "hidden": "block"} prose markdown pb-2 text-justify`}>
                 <CustomMarkdown className="*:m-0">{achievement.description}</CustomMarkdown>
             </div>
-            <div className={`${achievement.tags==undefined ? "hidden": "block"} my-2 mb-3 w-full flex flex-wrap gap-1 overflow-y-scroll`}>
+            <div className={`${achievement.tags==undefined ? "hidden": "block"} rounded-md p-1 bg-[#374151] mt-6 mb-1 w-full flex flex-wrap gap-1 overflow-y-scroll`}>
                 {achievement.tags!=undefined && achievement.tags.map((tag, index) => {
                     return <Tag key={index} tag={tag}/>
                 })}
@@ -36,7 +36,7 @@ const Achievements = () => {
 
     return (
         <div className="w-full h-[300px]">
-            <Title title="CERTIFICATION AND ACHIEVEMENTS" className="flex justify-start text-xl title secondary-title"
+            <Title title="ACHIEVEMENTS AND CERTS." className="flex justify-start text-xl title secondary-title"
                 onClick={()=>{navigate("/achievements-and-cert")}}/>
             <ul>
                 {achievement.map((item, index) => <Achievement key={index} achievement={item}/>)}

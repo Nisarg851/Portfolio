@@ -59,7 +59,7 @@ const Header = () => {
       </div>
 
       <Link to="/profile-card" className="w-full">
-        <Title title="NISARGKUMAR MAHYAVANSHI" className="max-sm:mb-4 w-full flex justify-center text-xl title title primary-title title-with-redirect"/>
+        <Title title="NISARGKUMAR MAHYAVANSHI" className="max-sm:mb-4 w-full flex-nowrap justify-center text-xl title primary-title title-with-redirect"/>
       </Link>
 
     </div>

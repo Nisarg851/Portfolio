@@ -21,7 +21,8 @@
     "react-markdown": "^9.0.3",
     "react-router-dom": "^7.1.1",
     "rehype-raw": "^7.0.0",
-    "remark-gfm": "^4.0.0"
+    "remark-gfm": "^4.0.0",
+    "remark-mermaid-plugin": "^1.0.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",

@@ -6,6 +6,7 @@ import WorkExperienceDetails from "./WorkExperienceDetails";
 import ProfileCard from "../ProfileCard/index";
 import { motion, AnimatePresence } from "framer-motion";
 import WorkExperienceView from "./WorkExperiencesView";
+import ProjectDetails from "./ProjectDetails";
 import AchievementAndCertView from "./AchievementAndCertView";
 
 const DetailsContainer = () => {
@@ -21,7 +22,7 @@ const DetailsContainer = () => {
         className={`
           bg-white shadow-[0_0px_12px_rgba(0,0,0,0.40)]
           lg:my-4 w-full h-[100vh] lg:w-[45vw] lg:h-[95vh] overflow-y-scroll flex flex-col items-center gap-2 lg:gap-4
-          ${location.pathname !== "/resume" ? "p-4 rounded-sm" : "w-full"}
+          ${location.pathname !== "/resume" ? "p-4 rounded-md" : "w-full"}
         `}>
 
         <AnimatePresence mode="wait">
@@ -31,6 +32,7 @@ const DetailsContainer = () => {
             <Route path="/tag/*" element={<DetailsOnTag />} />
             <Route path="/work-experiences" element={<WorkExperienceView/>}/>
             <Route path="/work-experience/*" element={<WorkExperienceDetails />} />
+            <Route path="/project-detail/*" element={<ProjectDetails />} />
             <Route path="/achievements-and-cert" element={<AchievementAndCertView />}/>
             <Route path="*" element={<ProfileCard />} />
           </Routes>
