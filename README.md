@@ -12,31 +12,31 @@
 
 ### Socials:
 <div style="display:flex; gap:4px;">
-<a href="https://www.linkedin.com/in/nisargmahyavanshi/" style="">
+<a target="_blank" href="https://www.linkedin.com/in/nisargmahyavanshi/" style="">
 <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white" alt="LinkedIn"/>
 </a>
 
-<a href="https://stackoverflow.com/users/17994181/nisarg851">
-<img src="https://img.shields.io/badge/-Stackoverflow-FE7A16?logo=stack-overflow&logoColor=white" alt="StackOverflow"/>
-</a>
-
-<a href="https://stackoverflow.com/users/17994181/nisarg851">
+<a target="_blank" href="https://stackoverflow.com/users/17994181/nisarg851">
 <img src="https://img.shields.io/badge/-GitHub-000000?logo=github&logoColor=white" alt="StackOverflow"/>
 </a>
 
-<a href="https://stackoverflow.com/users/17994181/nisarg851">
-<img src="https://img.shields.io/badge/-AWS%20Developer%20Associate-1926B0?logo=googlecloud&logoColor=white" alt="StackOverflow"/>
+<a target="_blank" href="https://www.credly.com/badges/49a2c662-e145-4b94-8d41-edd84c972ccb/public_url">
+<img src="https://img.shields.io/badge/-AWS%20Developer%20Associate-1926B0?logo=googlecloud&logoColor=white" alt="AWS"/>
 </a>
 
-<a href="https://x.com/KumarXRecord">
-<img src="https://img.shields.io/badge/-000000?logo=X&logoColor=white" alt="StackOverflow"/>
+<a target="_blank" href="https://x.com/KumarXRecord">
+<img src="https://img.shields.io/badge/-000000?logo=X&logoColor=white" alt="X"/>
 </a>
 
-<a href="https://portfolio-ox3k.onrender.com/contact-me/">
-<img src="https://img.shields.io/badge/-Mail-FF0000?logo=gmail&logoColor=white" alt="StackOverflow"/>
+<a target="_blank" href="https://portfolio-ox3k.onrender.com/">
+<img src="https://img.shields.io/badge/-Mail-FF0000?logo=gmail&logoColor=white" alt="Mail on Portfolio"/>
 </a>
 
-<a href="https://portfolio-ox3k.onrender.com/contact-me/">
-<img src="https://img.shields.io/badge/-LeetCode-000000?logo=leetcode&logoColor=#F89F1B" alt="StackOverflow"/>
+<a target="_blank" href="https://leetcode.com/u/Nisarg851/">
+<img src="https://img.shields.io/badge/-LeetCode-000000?logo=leetcode&logoColor=#F89F1B" alt="LeetCode"/>
 </a>
 </div>
+
+<a target="_blank" href="https://stackoverflow.com/users/17994181/nisarg851">
+<img src="https://img.shields.io/badge/-Stackoverflow-FE7A16?logo=stack-overflow&logoColor=white" alt="StackOverflow"/>
+</a>
