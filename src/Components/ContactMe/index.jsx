@@ -1,8 +1,6 @@
 import "./style.css";
 import UserProfileImage from "/user_profile.gif";
-import { useState } from "react";
-import { useEffect } from "react";
-import { useRef } from "react";
+import { useState, useEffect, useRef} from "react";
 import emailjs from "@emailjs/browser";
 import ResumeProfileIcon from "/resume-profile-icon.svg";
 import Title from "../Common/Title";
