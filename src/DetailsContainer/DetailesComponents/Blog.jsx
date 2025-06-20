@@ -1,5 +1,5 @@
 import BlogIcon from "/blog-icon.svg";
-import Tag from "../Common/Tag";
+import Tag from "../../Components/Common/Tag";
 import { Link } from "react-router-dom";
 
 const Blog = (blog) => {

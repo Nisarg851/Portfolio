@@ -1,14 +1,14 @@
 /* eslint-disable react/prop-types */
-import "./style.css";
+import "../styles/work-experience-style.css";
 import BulletPointIcon from "/bullet-point-icon.svg";
-import Title from "../Common/Title";
+import Title from "../../Components/Common/Title";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { lazy, Suspense } from "react";
-import Loader from "../Common/Loader";
+import Loader from "../../Components/Common/Loader";
 
-const CustomMarkdown = lazy(() => import("../Common/CustomMarkdown"));
+const CustomMarkdown = lazy(() => import("../../Components/Common/CustomMarkdown"));
 
 const ExperienceComponent = ({experience, index}) => {
     const baseDelay = 0.4;
@@ -20,8 +20,6 @@ const ExperienceComponent = ({experience, index}) => {
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: totalDelay }}>
-                {/* <span className={`absolute w-6 h-6 rounded-full -start-3 border-2 overflow-clip
-                    ${experience.duration.end=="Present" ? "border-[#00ff00]" : "border-[#0077b5]"}`}> */}
                 <span
                     className={`absolute w-8 h-8 md:w-6 md:h-6 rounded-full -start-4 md:-start-3 border-2 overflow-clip transition-transform
                         ${experience.duration.end === "Present" ? "border-[#00ff00]" : "border-[#0077b5]"}
@@ -46,7 +44,6 @@ const ExperienceComponent = ({experience, index}) => {
                     {
                         experience.responsibilities.map((responsibility, index) => {
                             return (
-                                // <li key={index} className="mx-4 flex items-start">
                                 <motion.li
                                     key={index}
                                     className="mx-4 pb-2 flex items-start"
@@ -75,19 +72,8 @@ const ExperienceComponent = ({experience, index}) => {
     );
 }
 
-const WorkExperience = ({workExperience}) => {
+const WorkExperienceSection = ({workExperience}) => {
     const navigate = useNavigate();
-    // const [workExperience, setWorkExperience] = useState([]);
-    // console.log(workExperience)
-    // useEffect(()=>{
-    //     const fetchData = async () => {
-    //         const res = await fetch(`https://raw.githubusercontent.com/Nisarg851/DataSource/master/Portfolio/resume_components.json`)
-    //         const data = await res.json()
-    //         setWorkExperience(data.work_experience);
-    //     }
-
-    //     fetchData()
-    // },[]);
 
     return (
         <div className="h-[80%] overflow-clip border-b-[1px] border-black">
@@ -106,14 +92,11 @@ const WorkExperience = ({workExperience}) => {
                             })
                         )
                     }
-                    {/* {resume_components.work_experience.map((experience, index) => {
-                        return <ExperienceComponent key={index} experience={experience} index={index}/>
-                    })} */}
                 </ol>
             </div>
         </div>
     );
 }
 
-export default WorkExperience;
+export default WorkExperienceSection;
 export {ExperienceComponent};

@@ -1,13 +1,13 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import ContactMe from "../ContactMe";
-import DetailsOnTag from "../DetialsOnTag";
-import ResumePage from "../ResumePage";
-import WorkExperienceDetails from "./WorkExperienceDetails";
-import ProfileCard from "../ProfileCard/index";
+import ContactMe from "./DetailesComponents/ContactMe";
+import DetailsOnTag from "./DetailesComponents/DetailsOnTag";
+import ResumePage from "../ResumeComponents/ResumePage";
+import WorkExperienceDetails from "./DetailesComponents/WorkExperienceDetails";
+import ProfileCard from "./DetailesComponents/ProfileCard";
 import { motion, AnimatePresence } from "framer-motion";
-import WorkExperienceView from "./WorkExperiencesView";
-import ProjectDetails from "./ProjectDetails";
-import AchievementAndCertView from "./AchievementAndCertView";
+import WorkExperienceView from "./DetailesComponents/WorkExperiencesView";
+import ProjectDetails from "./DetailesComponents/ProjectDetails";
+import AchievementAndCertView from "./DetailesComponents/AchievementAndCertView";
 
 const DetailsContainer = () => {
     const location = useLocation();

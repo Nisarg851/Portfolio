@@ -5,7 +5,7 @@ import remarkMermaid from "remark-mermaid-plugin";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 import { Link } from "react-router-dom";
-import "./profile-card.css";
+import "../styles/profile-card-style.css";
 
 const ProfileCard = () => {
     const [greetings, setGreetings] = useState('');

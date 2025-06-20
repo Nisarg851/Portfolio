@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
-import Tag from "../Common/Tag";
-import Title from "../Common/Title";
+import Title from "../../Components/Common/Title";
+import Tag from "../../Components/Common/Tag";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
-const Skills = ({skillsAndTools}) => {
+const SkillsSection = ({skillsAndTools}) => {
     const navigate = useNavigate();
     const [searchedValue, setSearchedValue] = useState("");
 
@@ -121,4 +121,4 @@ const Skills = ({skillsAndTools}) => {
     );
 };
 
-export default Skills;
+export default SkillsSection;

@@ -1,6 +1,6 @@
 import GitHubIcon from "/github-icon.svg";
 import VideoIcon from "/video-icon.svg";
-import Tag from "../Common/Tag";
+import Tag from "../../Components/Common/Tag";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 

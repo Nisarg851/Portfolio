@@ -1,13 +1,15 @@
 import { lazy, Suspense } from "react";
 import { useEffect, useState } from "react";
-import "./style.css"
+import "./styles/resume-page-style.css";
 
-const Header = lazy(() => import("../Header"));
-const WorkExperience = lazy(() => import("../WorkExperience"));
-const Projects = lazy(() => import("../Projects"));
-const Skills = lazy(() => import("../Skills"));
-const Achievements = lazy(() => import("../Achievements"));
-import Loader from "../Common/Loader";
+
+
+const HeaderSection = lazy(() => import("./Sections/HeaderSection"));
+const WorkExperienceSection = lazy(() => import("./Sections/WorkExperienceSection"));
+const ProjectsSection = lazy(() => import("./Sections/ProjectsSection"));
+const SkillsSection = lazy(() => import("./Sections/SkillsSection"));
+const AchievementsSection = lazy(() => import("./Sections/AchievementsSection"));
+import Loader from "../Components/Common/Loader";
 
 import { Link } from "react-router-dom";
 
@@ -47,11 +49,11 @@ const ResumePage = () => {
     return (
         <div className='lg:my-4 px-4 py-6 w-full lg:w-[45vw] h-full lg:h-[95vh] shadow-[0_0px_12px_rgba(0,0,0,0.40)] bg-white rounded-md overflow-x-clip overflow-y-scroll flex flex-col gap-2 lg:gap-4'>
             <Suspense fallback={<Loader/>}>
-                <Header /> 
-                <Skills skillsAndTools={resumeComponent==null?[]:resumeComponent.skills_and_tools}/>
-                <WorkExperience workExperience={resumeComponent==null?[]:resumeComponent.work_experience}/>
-                <Projects resumeProjects={resumeComponent==null?[]:resumeComponent.projects}/>
-                <Achievements/>
+                <HeaderSection /> 
+                <SkillsSection skillsAndTools={resumeComponent==null?[]:resumeComponent.skills_and_tools}/>
+                <WorkExperienceSection workExperience={resumeComponent==null?[]:resumeComponent.work_experience}/>
+                <ProjectsSection resumeProjects={resumeComponent==null?[]:resumeComponent.projects}/>
+                <AchievementsSection/>
                 <ResumePageEnd/>
             </Suspense>
         </div>

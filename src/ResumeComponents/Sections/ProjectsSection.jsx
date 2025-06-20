@@ -1,14 +1,14 @@
 /* eslint-disable react/prop-types */
-import "./style.css";
-import ProjectCard from "./ProjectCard";
-import Title from "../Common/Title";
+import "../styles/project-style.css";
+import ProjectCard from "../SubComponents/ProjectCard";
+import Title from "../../Components/Common/Title";
 import { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import BulletPointIcon from "/bullet-point-icon.svg";
-import Loader from "../Common/Loader";
+import Loader from "../../Components/Common/Loader";
 
-const Projects = ({resumeProjects}) => {
+const ProjectsSection = ({resumeProjects}) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
     const navigate = useNavigate();
@@ -63,4 +63,4 @@ const Projects = ({resumeProjects}) => {
     );
 }
 
-export default Projects;
+export default ProjectsSection;

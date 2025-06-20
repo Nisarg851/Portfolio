@@ -1,13 +1,13 @@
-import "./style.css";
+import "../styles/header-style.css";
 import MailIcon from "/mail-icon.svg";
 import LinkedInIcon from "/linkedin-icon.svg";
 import GitHubIcon from "/github-icon.svg";
 import PlusIcon from "/plus-icon.svg";
 import ResumeIcon from "/resume-profile-icon.svg";
-import Title from "../Common/Title";
+import Title from "../../Components/Common/Title";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const HeaderSection = () => {
 
   const ContactLinks = [
     {"icon": MailIcon,
@@ -66,4 +66,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderSection;

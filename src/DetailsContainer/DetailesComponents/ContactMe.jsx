@@ -1,9 +1,9 @@
-import "./style.css";
+import "../styles/contact-me-style.css";
 import UserProfileImage from "/user_profile.gif";
 import { useState, useEffect, useRef} from "react";
 import emailjs from "@emailjs/browser";
 import ResumeProfileIcon from "/resume-profile-icon.svg";
-import Title from "../Common/Title";
+import Title from "../../Components/Common/Title";
 import { Link } from "react-router-dom";
 
 const getCurrentDateTimeString = () => {

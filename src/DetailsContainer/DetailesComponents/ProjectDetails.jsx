@@ -1,9 +1,9 @@
 import { useState, useEffect, useMemo } from "react";
 import { Link, useLocation } from "react-router-dom";
-import CustomMarkdown from "../Common/CustomMarkdown";
+import CustomMarkdown from "../../Components/Common/CustomMarkdown";
 import ResumeProfileIcon from "/resume-profile-icon.svg";
-import Title from "../Common/Title";
-import Loader from "../Common/Loader";
+import Title from "../../Components/Common/Title";
+import Loader from "../../Components/Common/Loader";
 
 const ProjectDetails = () => {
     const location = useLocation();

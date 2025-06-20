@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
-import Title from "../Common/Title";
+import Title from "../../Components/Common/Title";
 import { Link } from "react-router-dom";
-import CustomMarkdown from "../Common/CustomMarkdown";
+import CustomMarkdown from "../../Components/Common/CustomMarkdown";
 import { useNavigate } from "react-router-dom";
-import Tag from "../Common/Tag";
+import Tag from "../../Components/Common/Tag";
 import { useState } from "react";
 import { useEffect } from "react";
-import Loader from "../Common/Loader";
+import Loader from "../../Components/Common/Loader";
 
 const Achievement = ({achievement, onResumePage}) => {
     return (
@@ -31,7 +31,7 @@ const Achievement = ({achievement, onResumePage}) => {
     );
 }
 
-const Achievements = () => {
+const AchievementsSection = () => {
     const navigate = useNavigate();
     
     const [achievement, setAchievement] = useState([]);
@@ -39,17 +39,11 @@ const Achievements = () => {
         const fetchData = async () => {
             const res = await fetch(`https://raw.githubusercontent.com/Nisarg851/DataSource/master/Portfolio/data/achievement.json`)
             const data = await res.json()
-            // console.log("Resume component data: ", data.work_experience)
             setAchievement(data);
         }
 
         fetchData()
     },[]);
-    // const achievement = [
-    //     {"id":1, "title": "AWS Certified Developer - Associate", "org": "Amazon Web Services Training and Certification", "date": "Oct 2024", "link": "https://www.credly.com/badges/49a2c662-e145-4b94-8d41-edd84c972ccb/linked_in_profile"},
-    //     {"id":2, "title": "Humber Expo Winner", "org": "Humber", "date": "Aug 2023", "link": "https://www.linkedin.com/posts/hemali1310_educationinnovation-projectexpo-bestproject-activity-7095930632148553729-fN3U"},
-    //     {"id":3, "title": "1st Runner-up at Cloud Native Hackathon", "org": "DevPost", "date": "Dec 2021", "link": "https://cloudnativehack21.devpost.com/project-gallery"}
-    // ]
 
     return (
         <div className="w-full h-[300px]">
@@ -64,5 +58,5 @@ const Achievements = () => {
     );
 }
 
-export default Achievements;
+export default AchievementsSection;
 export {Achievement};

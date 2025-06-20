@@ -1,9 +1,9 @@
 import ResumeProfileIcon from "/resume-profile-icon.svg";
 import { Link } from "react-router-dom";
-import Title from "../Common/Title";
-import { Achievement } from "../Achievements";
+import Title from "../../Components/Common/Title";
+import { Achievement } from "../../ResumeComponents/Sections/AchievementsSection";
 import { useState, useEffect } from "react";
-import Loader from "../Common/Loader";
+import Loader from "../../Components/Common/Loader";
 
 const AchievementAndCertView = () => {
     const [achievement, setAchievement] = useState([]);

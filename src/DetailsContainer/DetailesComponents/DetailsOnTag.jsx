@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import "./style.css";
+import "../styles/details-on-tag-style.css";
 import ResumeProfileIcon from "/resume-profile-icon.svg";
-import ProjectDetailView from "../Projects/ProjectDetailView";
-import Blog from "../DetailsContainer/Blog";
+import ProjectDetailView from "../../ResumeComponents/SubComponents/ProjectDetailView";
+import Blog from "./Blog";
 import { useEffect, useMemo } from "react";
-import Title from "../Common/Title";
+import Title from "../../Components/Common/Title";
 
 const DetailsOnTag = () => {
     const [activeState, setActiveState] = useState("Projects");

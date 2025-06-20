@@ -1,12 +1,11 @@
 import { useMemo } from "react";
 import ResumeProfileIcon from "/resume-profile-icon.svg";
 import { Link, useLocation } from "react-router-dom";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-import "./work-exp-details.css";
-import Title from "../Common/Title";
-import CustomMarkdown from "../Common/CustomMarkdown";
+import "../styles/work-exp-details-style.css";
+import Title from "../../Components/Common/Title";
+import CustomMarkdown from "../../Components/Common/CustomMarkdown";
 
 const WorkExperienceDetails = () => {
     const location = useLocation();
