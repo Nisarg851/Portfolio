@@ -1,8 +1,8 @@
 import { BrowserRouter } from 'react-router-dom';
 import './App.css';
-import ResumePage from './Components/ResumePage';
-import DetailsContainer from './Components/DetailsContainer';
-import Squares from './Components/Imported/Squares';
+import ResumePage from './ResumeComponents/ResumePage';
+import DetailsContainer from "./DetailsContainer/DetailsContainer";
+import Squares from "./Components/Imported/Squares";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
           />
         </div>
         <BrowserRouter>
-          <div className='hidden md:block'> <ResumePage/> </div>
+          <div className='hidden lg:block'> <ResumePage/> </div>
           <DetailsContainer/>
         </BrowserRouter>
       </div>
