@@ -13,10 +13,6 @@
     box-shadow: 0 0 4px rgb(214, 214, 214);
 }
 
-/* .card:hover{
-    animation: card-pop-animation 0.4s ease forwards;
-} */
-
 .project-icon{
     display: absolute;
     right: 0px;
@@ -32,7 +28,7 @@
 
 .block-ellipsis {
     display: -webkit-box;
-    line-clamp: 4; /* Number of lines */
+    line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;

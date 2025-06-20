@@ -31,29 +31,14 @@ const ProfileCard = () => {
         }
     },[]);
 
-    const mediumScreenSize = 768;
+    const mediumScreenSize = 1024;
 
     return (
         <div>
-            <Link to="/resume" onClick={event => window.innerWidth>=mediumScreenSize && event.preventDefault()} className="cursor-default">
+            <Link to="/resume" onClick={event => window.innerWidth>=mediumScreenSize && event.preventDefault()} className="cursor-pointer">
                 <div className="w-full flex justify-center items-center">
                     <img src="https://avatars.githubusercontent.com/u/52291990" alt="Nisarg851" className="my-4 md:w-[50%] shadow-[0_0px_12px_rgba(0,0,0,0.40)] rounded-full "/>
                 </div>
-                {/* <div className="w-fit profile-img relative flex justify-center items-center bg-black rounded-full overflow-hidden max-md:animate-pulse">
-                    <div className="absolute w-fit h-fit">
-                        <Particles
-                            particleColors={['#ffffff', '#ffffff']}
-                            particleCount={500}
-                            particleSpread={10}
-                            speed={0.1}
-                            particleBaseSize={100}
-                            moveParticlesOnHover={true}
-                            alphaParticles={false}
-                            disableRotation={false}
-                        />
-                    </div>
-                    <img src="https://avatars.githubusercontent.com/u/52291990" alt="Nisarg851" className="my-4 md:w-[50%] rounded-full"/>
-                </div> */}
             </Link>
             <h1 className="text-2xl font-extrabold">{greetings}</h1>
             <div className="prose markdown">

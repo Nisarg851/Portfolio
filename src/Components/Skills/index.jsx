@@ -1,19 +1,19 @@
+/* eslint-disable react/prop-types */
 import Tag from "../Common/Tag";
-import resume_components from "../../utils/resume_components.json";
 import Title from "../Common/Title";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
-const Skills = () => {
+const Skills = ({skillsAndTools}) => {
     const navigate = useNavigate();
     const [searchedValue, setSearchedValue] = useState("");
 
     const [isCollapsed, setIsCollapsed] = useState(true);
     const inputRef = useRef(null);
 
-    const skills = Object.entries(resume_components.skills_and_tools).flatMap(([domain, tags]) =>
+    const skills = Object.entries(skillsAndTools).flatMap(([domain, tags]) =>
         tags.map((tag, index) => ({ id: `${domain}_${index}`, tag }))
     );
 
@@ -42,14 +42,13 @@ const Skills = () => {
     };
 
     const [isScrolling, setIsScrolling] = useState(false);
-
     useEffect(() => {
         let scrollTimer;
 
         const handleScroll = () => {
             setIsScrolling(true);
             clearTimeout(scrollTimer);
-            scrollTimer = setTimeout(() => setIsScrolling(false), 200); // Resume after 200ms
+            scrollTimer = setTimeout(() => setIsScrolling(false), 200); 
         };
 
         window.addEventListener("hover", handleScroll);
@@ -121,28 +120,5 @@ const Skills = () => {
         </div>
     );
 };
-
-// const Skills = () => {
-//     return (
-//         <div className="h-[50%] mb-4">
-//             <Title title="SKILL SET" className="flex justify-start text-xl title secondary-title"/>
-
-//             <div className="mt-2 p-1 w-full h-[90%] overflow-y-scroll flex flex-wrap gap-1 justify-stretch  items-stretch">
-//                 {Object.entries(resume_components.skills_and_tools).flatMap(([domain, tags]) => (
-//                     tags.map((tag, index) => (
-//                         <motion.div
-//                             key={index}
-//                             className="flex grow"
-//                             initial={{ scale: 0, opacity: 0 }}
-//                             animate={{ scale: 1, opacity: 1 }}
-//                             transition={{ duration: 0.5, delay: Math.random() * 1.5 }}>
-//                             <Tag key={`${domain}_${index}`} tag={tag} tagType={"skill"}/>
-//                         </motion.div>
-//                     ))
-//                 ))}
-//             </div>
-//         </div>
-//     );
-// }
 
 export default Skills;

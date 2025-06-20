@@ -1,12 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./style.css";
-
 import ResumeProfileIcon from "/resume-profile-icon.svg";
-
-import projects from "../../utils/projects.json";
-import blogs from "../../utils/blogs.json";
-
 import ProjectDetailView from "../Projects/ProjectDetailView";
 import Blog from "../DetailsContainer/Blog";
 import { useEffect, useMemo } from "react";
@@ -28,13 +23,31 @@ const DetailsOnTag = () => {
         "Blogs" : blogList
     }
 
+    const [projects, setProjects] = useState([]);
+    const [blogs, setBlogs] = useState([]);
+
+    useEffect(()=>{
+        const fetchData = async () => {
+            const projects_res = await fetch(`https://raw.githubusercontent.com/Nisarg851/DataSource/master/Portfolio/data/projects.json`)
+            const blogs_res = await fetch(`https://raw.githubusercontent.com/Nisarg851/DataSource/master/Portfolio/data/blogs.json`)
+
+            const projectsData = await projects_res.json()
+            const blogsData = await blogs_res.json()
+
+            setProjects(projectsData)
+            setBlogs(blogsData)
+        }
+
+        fetchData()
+    },[]);
+
     useEffect(()=>{
         const key = searchParams.get("key");
         const tempProjList = key=="all" ? projects : projects.filter(obj => obj.tags.some(tag => tag[key])); 
         setActiveState(tempProjList.length > 0 ? "Projects" : "Blogs");
         setProjectList(tempProjList);
         setBlogList(key=="all" ? blogs : blogs.filter(obj => obj.tags.some(tag => tag[key])));
-    },[searchParams]);
+    },[searchParams, projects, blogs]);
 
     return (
         <div className="w-full h-full">

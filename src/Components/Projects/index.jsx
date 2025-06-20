@@ -1,17 +1,29 @@
+/* eslint-disable react/prop-types */
 import "./style.css";
 import ProjectCard from "./ProjectCard";
-import resume_components from "../../utils/resume_components.json";
-import projects from "../../utils/projects.json";
 import Title from "../Common/Title";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import BulletPointIcon from "/bullet-point-icon.svg";
+import Loader from "../Common/Loader";
 
-const Projects = () => {
+const Projects = ({resumeProjects}) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
     const navigate = useNavigate();
+
+    const [projects, setProjects] = useState([]);
+
+    useEffect(()=>{
+        const fetchData = async () => {
+            const projects_res = await fetch(`https://raw.githubusercontent.com/Nisarg851/DataSource/master/Portfolio/data/projects.json`)
+            const projectsData = await projects_res.json()
+            setProjects(projectsData)
+        }
+
+        fetchData()
+    },[]);
 
     return (
         <motion.div 
@@ -31,9 +43,11 @@ const Projects = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.8 }}>
                     {
-                        resume_components.projects.map((projectID, index) => {
-                            return <ProjectCard key={index} project={projects[projectID-1]} />;
-                        })
+                        projects.length==0
+                            ? <Loader/>
+                            : (resumeProjects.map((projectID) => {
+                                return <ProjectCard key={projectID} project={projects[projectID-1]} />;
+                            }))
                     }
                     •••
                     <div className="mx-4 px-4 py-2 flex text-nowrap rounded-md snap-center text-white bg-[#374151] cursor-pointer font-semibold" onClick={()=>{navigate("/tag?key=all&value=Project")}}>

@@ -3,25 +3,43 @@ import { Link, useLocation } from "react-router-dom";
 import CustomMarkdown from "../Common/CustomMarkdown";
 import ResumeProfileIcon from "/resume-profile-icon.svg";
 import Title from "../Common/Title";
-import projects from "../../utils/projects.json";
+import Loader from "../Common/Loader";
 
 const ProjectDetails = () => {
     const location = useLocation();
     const searchParams = useMemo(()=>{
         return new URLSearchParams(location.search);
     },[location.search]);
+    const [loader, setLoader] = useState(true);
 
-    const [markdown, setMarkdown] = useState('');
+    const [projects, setProjects] = useState([]);
+    useEffect(()=>{
+        const fetchData = async () => {
+            const projects_res = await fetch(`https://raw.githubusercontent.com/Nisarg851/DataSource/master/Portfolio/data/projects.json`)
+            const projectsData = await projects_res.json()
+            setProjects(projectsData)
+        }
 
-    const project_source_code_url_components = projects[searchParams.get("projectID")-1]["source_code"].split("/");
+        fetchData()
+    },[]);
+
+    const project_source_code_url_components = projects.length==0 ? [] : projects[searchParams.get("projectID")-1]["source_code"].split("/");
     const repo_name = project_source_code_url_components[project_source_code_url_components.length-1];
 
+    const [markdown, setMarkdown] = useState('');
     useEffect(()=>{
-            fetch(`https://raw.githubusercontent.com/Nisarg851/${repo_name}/master/README.md`)
-            .then(res => res.text())
-            .then(text => setMarkdown(text))
-            .catch(error => console.error('Error fetching Markdown:', error))
-        });
+        const fetchData = async () => {
+            setLoader(true);
+            if(repo_name!=undefined){
+                const res = await fetch(`https://raw.githubusercontent.com/Nisarg851/${repo_name}/master/README.md`)
+                const data = await res.text()
+                setMarkdown(data)
+            }
+            setLoader(false);
+        }
+
+        fetchData()
+    }, [projects, markdown, location.search]);
 
     return (
         <div className="w-full h-full">
@@ -29,10 +47,15 @@ const ProjectDetails = () => {
                 <Link to="/resume" className="md:hidden p-1"><img src={ResumeProfileIcon} alt="resume" /></Link>
                 <Title title={"PROJECT DETAIL"} className="w-full flex justify-center text-2xl title primary-title underline"/>
             </div>
-            <div className="prose markdown pb-2">
-                <hr />
-                <CustomMarkdown>{markdown}</CustomMarkdown>
-            </div>
+            {loader
+                ? <Loader/>
+                : (
+                    <div className="prose markdown pb-2">
+                        <hr />
+                        <CustomMarkdown>{markdown}</CustomMarkdown>
+                    </div>
+                )
+            }
         </div>);
 }
 

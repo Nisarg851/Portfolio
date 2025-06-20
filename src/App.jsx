@@ -17,7 +17,7 @@ function App() {
           />
         </div>
         <BrowserRouter>
-          <div className='hidden md:block'> <ResumePage/> </div>
+          <div className='hidden lg:block'> <ResumePage/> </div>
           <DetailsContainer/>
         </BrowserRouter>
       </div>

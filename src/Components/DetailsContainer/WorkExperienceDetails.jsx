@@ -17,7 +17,7 @@ const WorkExperienceDetails = () => {
     const [markdown, setMarkdown] = useState('');
 
     useEffect(()=>{
-        fetch(`/work-exp-blogs/${(`${searchParams.get("org")} ${searchParams.get("role")}`).replaceAll(' ','_')}.md`)
+        fetch(`https://raw.githubusercontent.com/Nisarg851/DataSource/master/Portfolio/work-exp-blogs/${(`${searchParams.get("org")} ${searchParams.get("role")}`).replaceAll(' ','_')}.md`)
         .then(res => res.text())
         .then(text => setMarkdown(text))
         .catch(error => console.error('Error fetching Markdown:', error));
