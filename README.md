@@ -1,4 +1,4 @@
-## Hi 👋 My name is [Nisarg Mahyavanshi→](https://portfolio-ox3k.onrender.com/)
+## Hi 👋 My name is [Nisarg Mahyavanshi→](https://nisargkumar.dev/resume)
 ### Full-stack and DevOps Engineer
 🏆 AWS Certified Developer - Associate <br>
 🔭 Currently working on Cloud infrastructure automation and full-stack development projects.<br>
