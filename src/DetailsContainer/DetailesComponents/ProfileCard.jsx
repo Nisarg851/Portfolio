@@ -35,9 +35,9 @@ const ProfileCard = () => {
 
     return (
         <div>
-            <Link to="/resume" onClick={event => window.innerWidth>=mediumScreenSize && event.preventDefault()} className="cursor-pointer">
+            <Link to="/resume" onClick={event => window.innerWidth>=mediumScreenSize && event.preventDefault()} className={window.innerWidth >= mediumScreenSize && "cursor-default"}>
                 <div className="w-full flex justify-center items-center">
-                    <img src="https://avatars.githubusercontent.com/u/52291990" alt="Nisarg851" className="my-4 md:w-[50%] shadow-[0_0px_12px_rgba(0,0,0,0.40)] rounded-full "/>
+                    <img src="https://avatars.githubusercontent.com/u/52291990" alt="Nisarg851" className="my-4 md:w-[50%] shadow-[0_0px_12px_rgba(0,0,0,0.40)] rounded-full border-4 border-black"/>
                 </div>
             </Link>
             <h1 className="text-2xl font-extrabold">{greetings}</h1>

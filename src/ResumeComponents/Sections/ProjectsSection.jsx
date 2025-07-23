@@ -1,15 +1,16 @@
 /* eslint-disable react/prop-types */
 import "../styles/project-style.css";
-import ProjectCard from "../SubComponents/ProjectCard";
 import Title from "../../Components/Common/Title";
 import { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import BulletPointIcon from "/bullet-point-icon.svg";
 import Loader from "../../Components/Common/Loader";
+import NewProjectCard from "../SubComponents/NewProjectCard";
 
 const ProjectsSection = ({resumeProjects}) => {
     const ref = useRef(null);
+    const scrollContainerRef = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
     const navigate = useNavigate();
 
@@ -22,8 +23,16 @@ const ProjectsSection = ({resumeProjects}) => {
             setProjects(projectsData)
         }
 
-        fetchData()
+        fetchData();
     },[]);
+
+    useEffect(() => {
+        if (projects.length > 0 && scrollContainerRef.current) {
+            setTimeout(() => {
+                scrollContainerRef.current.scrollLeft = 0;
+            }, 0);
+        }
+    }, [projects]);
 
     return (
         <motion.div 
@@ -38,6 +47,7 @@ const ProjectsSection = ({resumeProjects}) => {
                 <div className="absolute z-20 top-0 -left-4 w-4 h-full bg-gradient-to-r from-white to-transparent pointer-events-none"></div>
                 
                 <motion.div
+                    ref={scrollContainerRef}
                     className="-mx-4 ps-4 md:pe-4 relative py-2 w-[100vw] h-[40vh] md:w-[46vw] flex justify-start items-center overflow-x-scroll scroll-smooth snap-x snap-mandatory"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -46,9 +56,10 @@ const ProjectsSection = ({resumeProjects}) => {
                         projects.length==0
                             ? <Loader/>
                             : (resumeProjects.map((projectID) => {
-                                return <ProjectCard key={projectID} project={projects[projectID-1]} />;
+                                return <NewProjectCard key={projectID} project={projects[projectID-1]} />;
                             }))
                     }
+                    {/* {projects.length &&                     <NewProjectCard project={projects[0]}/>} */}
                     •••
                     <div className="mx-4 px-4 py-2 flex text-nowrap rounded-md snap-center text-white bg-[#374151] cursor-pointer font-semibold" onClick={()=>{navigate("/tag?key=all&value=Project")}}>
                         Show all 

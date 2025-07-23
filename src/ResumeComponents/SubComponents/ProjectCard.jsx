@@ -16,6 +16,7 @@ const ProjectCard = (project) => {
                 transition={{ duration: 0.6, delay: 0.2 }}>
             
                 <div className="p-1.5 w-full h-[80%] overflow-hidden flex flex-col justify-between">
+                    
                     <div>
                         <div className="flex justify-end gap-1">
                             <abbr title="The Project is currently under-construction 🛠️" className={`${project.project.stage!="dev" && "hidden"}`}>
@@ -41,6 +42,7 @@ const ProjectCard = (project) => {
                     </div>
                     <p className="description block-ellipsis leading-none hyphens-auto text-sm">{project.project.description}</p>
                 </div>
+
                 <div className="p-1 w-full min-h-[20%] flex flex-wrap gap-1 bg-[#374151] overflow-y-scroll">
                     {project.project.tags.map((tag, index) => {
                         return <Tag key={index} tag={tag}/>
