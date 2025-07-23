@@ -58,8 +58,7 @@ const ExperienceComponent = ({experience, index}) => {
                                         transition={{ type: "spring", stiffness: 300 }}
                                     />
                                     <Suspense fallback={<Loader/>}>
-                                    <CustomMarkdown className="work-exprience-item-point">{responsibility}</CustomMarkdown>
-                                    
+                                    <CustomMarkdown className="work-exprience-item-point">{responsibility}</CustomMarkdown>                
                                     </Suspense>
                                 </motion.li>
                                 // </li>

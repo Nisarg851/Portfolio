@@ -1,6 +1,7 @@
 import GitHubIcon from "/github-icon.svg";
 import VideoIcon from "/video-icon.svg";
 import UnderDevIcon from "/under-development-icon.svg";
+import VisitSiteIcon from "/visit-site-icon.svg";
 import { Link } from "react-router-dom";
 import Tag from "../../Components/Common/Tag";
 import { motion } from "framer-motion";
@@ -9,6 +10,7 @@ const ProjectMetaIcons = ({link, iconName}) => {
     const icons = {
         "github": {icon: GitHubIcon, styleClass: "github-icon", title: "Github", alt:"github"},
         "video": {icon: VideoIcon, styleClass: "hover:animate-pulse", title: "The Project has a demo video ▶️", alt: "▶️"},
+        "live": {icon: VisitSiteIcon, styleClass: "hover:animate-bounce", title: "Checkout the Implementation", alt: "→"},
         "dev": {icon: UnderDevIcon, styleClass: "hover:animate-spin", title: "The Project is currently under-construction 🛠️", alt: "🛠️"}
     }
 
@@ -35,6 +37,7 @@ const NewProjectCard = (project) => {
                     {project.project.stage=="dev" && <ProjectMetaIcons link={null} iconName={"dev"}/>}
                     {project.project.video!=undefined && <ProjectMetaIcons link={project.project.video} iconName={"video"}/>}
                     {project.project.source_code!=undefined && <ProjectMetaIcons link={project.project.source_code} iconName={"github"}/>}
+                    {project.project.implementation_link!="#" && <ProjectMetaIcons link={project.project.implementation_link} iconName={"live"}/>}
                 </div>
                 
                 <Link
